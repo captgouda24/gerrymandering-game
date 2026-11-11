@@ -5,7 +5,7 @@ set -e
 REPO=/home/user/gerrymandering-game
 mkdir -p $REPO/code $REPO/data
 rm -rf $REPO/code && mkdir -p $REPO/code && cp code/*.py code/*.sh $REPO/code/
-find data -maxdepth 2 -type f \( -name '*.json' -o -name '*.csv' -o -name '*.log' -o -name 'wiki_house.txt' -o -name '2026_*.txt' -o -name 'vtd_files.txt' \) \
+find data -maxdepth 2 -type f \( -name '*.json' -o -name '*.csv' -o -name '*.log' -o -name 'wiki_house.txt' -o -name '2026_*.txt' -o -name 'vtd_files.txt' -o -path 'data/assign/*.npz' \) \
      -not -path 'data/vtd/*' -not -path 'data/vtd_repo/*' -exec cp --parents {} $REPO/ \;
 cd $REPO
 git add -A

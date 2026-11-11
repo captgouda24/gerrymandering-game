@@ -44,13 +44,15 @@ def start_partition(st, N, V, indptr, indices, eps, seed):
 def smap(sums):
     l = flip.leans_of(sums); o = np.argsort(-l); return l[o].round(2).tolist(), flip.shares_of(sums)[o].round(3).tolist()
 
-def congress(st, V, indptr, indices, verbose):
+def congress(st, V, indptr, indices, verbose, keep=None):
+    """keep: optional dict that receives the precinct-to-district assignment of every map drawn."""
     N = SEATS[st]; n = len(V); ideal = V[:, 4].sum() / N; none = np.zeros(3)
     starts = [start_partition(st, N, V, indptr, indices, 0.01, sd) for sd in range(RESTARTS)]
     tol = max(s[2] for s in starts); lo, hi = ideal * (1 - tol), ideal * (1 + tol)
     res = dict(seats=N, pop_tolerance=tol, method='precinct flips, contiguity only', neutral_one=smap(starts[0][1]),
                neutral=np.mean([np.sort(flip.leans_of(s[1]))[::-1] for s in starts], 0).round(2).tolist(), R={}, D={}, R_h={}, D_h={})
     iters = int(min(4e7, max(4e6, 3000 * n)) * EFFORT)
+    if keep is not None: keep['neutral'] = starts[0][0].copy()
     for name, sign in (('R', 1.0), ('D', -1.0)):
         cur = [(a.copy(), s.copy()) for a, s, _ in starts]
         for m in TARGETS:
@@ -60,9 +62,11 @@ def congress(st, V, indptr, indices, verbose):
                 c = (int((sign * flip.leans_of(s) >= m).sum()), a, s)
                 if best is None or c[0] > best[0]: best = c
             res[name][str(m)] = smap(best[2])
+            if keep is not None: keep[f'{name}_{m}'] = best[1].copy()
             ah, sh = best[1].copy(), best[2].copy()
             flip.anneal(ah, sh, V, indptr, indices, lo, hi, sign, float(m) + 0.3, HEDGE, iters, 0.03, 0.0005, 4.0, 0.7, 1, 7 + m)
             res[name + '_h'][str(m)] = smap(sh)
+            if keep is not None: keep[f'{name}_h_{m}'] = ah.copy()
             if verbose: print(st, name, m, 'seats>=m', best[0], '/', N, 'hedged', int((sign * flip.leans_of(sh) >= m).sum()), flush=True)
     return res
 
