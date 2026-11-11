@@ -1,0 +1,37 @@
+{
+ "theta": {
+  "sd_nat": 4.477974389235266,
+  "mid_pen": 3.2533850684138073,
+  "pres_pen": 2.1641927210297216,
+  "rho": 0.09645197597668861,
+  "sd_state": 0.008165831355935751,
+  "sd_dist": 5.753702235662272,
+  "incumb": 3.1663169111381504,
+  "sd_drift": 3.6133455376433115
+ },
+ "data": {
+  "pres_party_margin_midterm": -5.2,
+  "pres_party_margin_presyear": -2.0142857142857142,
+  "sd_national_margin": 6.254651602340987,
+  "sd_national_swing": 8.675837990371006,
+  "sd_state_swing_dev": 4.01943677973544,
+  "sd_district_swing_resid": 8.367163241942391,
+  "incumbency_coef": 1.6991600575599355,
+  "seat_flip_rate": 0.06555841723249825,
+  "open_seat_rate": 0.11485380116959065,
+  "sd_state_drift_4cycles": 9.092494770381865,
+  "sd_district_within_state": 31.595920306991378
+ },
+ "model": {
+  "pres_party_margin_midterm": -5.017893356053582,
+  "pres_party_margin_presyear": -1.9826471268177757,
+  "sd_national_margin": 5.998526781495042,
+  "sd_national_swing": 8.926425156866769,
+  "sd_state_swing_dev": 4.466757696870731,
+  "sd_district_swing_resid": 8.064848450173189,
+  "incumbency_coef": 1.8146490585812876,
+  "seat_flip_rate": 0.07892720306513408,
+  "sd_state_drift_4cycles": 8.044836475560965
+ },
+ "retire": 0.115
+}

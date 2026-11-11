@@ -1,0 +1,1340 @@
+{
+ "gov": {
+  "Alabama": {
+   "winner": "Republican",
+   "D": 48.0,
+   "R": 52.0,
+   "raw": [
+    [
+     "Republican",
+     true,
+     52.0
+    ],
+    [
+     "Democratic",
+     false,
+     48.0
+    ]
+   ]
+  },
+  "Alaska": {
+   "winner": null,
+   "D": 49.1,
+   "R": 50.9,
+   "raw": [
+    [
+     "Democratic",
+     false,
+     49.1
+    ],
+    [
+     "Republican",
+     false,
+     29.2
+    ],
+    [
+     "Republican",
+     false,
+     14.2
+    ],
+    [
+     "Republican",
+     false,
+     7.5
+    ]
+   ]
+  },
+  "Arizona": {
+   "winner": "Democratic",
+   "D": 55.4,
+   "R": 42.8,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     55.4
+    ],
+    [
+     "Republican",
+     false,
+     42.8
+    ],
+    [
+     "Green",
+     false,
+     0.9
+    ],
+    [
+     "No Labels",
+     false,
+     0.9
+    ]
+   ]
+  },
+  "Arkansas": {
+   "winner": "Republican",
+   "D": 38.6,
+   "R": 53.9,
+   "raw": [
+    [
+     "Republican",
+     true,
+     53.9
+    ],
+    [
+     "Democratic",
+     false,
+     38.6
+    ],
+    [
+     "Libertarian",
+     false,
+     7.6
+    ]
+   ]
+  },
+  "California": {
+   "winner": "Democratic",
+   "D": 64.6,
+   "R": 35.4,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     64.6
+    ],
+    [
+     "Republican",
+     false,
+     35.4
+    ]
+   ]
+  },
+  "Colorado": {
+   "winner": "Democratic",
+   "D": 60.8,
+   "R": 33.5,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     60.8
+    ],
+    [
+     "Republican",
+     false,
+     33.5
+    ]
+   ]
+  },
+  "Connecticut": {
+   "winner": "Democratic",
+   "D": 59.3,
+   "R": 40.7,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     59.3
+    ],
+    [
+     "Republican",
+     false,
+     40.7
+    ]
+   ]
+  },
+  "Florida": {
+   "winner": "Republican",
+   "D": 48.7,
+   "R": 50.0,
+   "raw": [
+    [
+     "Republican",
+     true,
+     50.0
+    ],
+    [
+     "Democratic",
+     false,
+     48.7
+    ]
+   ]
+  },
+  "Georgia": {
+   "winner": "Democratic",
+   "D": 54.3,
+   "R": 45.7,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     54.3
+    ],
+    [
+     "Republican",
+     false,
+     45.7
+    ]
+   ]
+  },
+  "Hawaii": {
+   "winner": "Democratic",
+   "D": 72.6,
+   "R": 27.4,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     72.6
+    ],
+    [
+     "Republican",
+     false,
+     27.4
+    ]
+   ]
+  },
+  "Idaho": {
+   "winner": "Republican",
+   "D": 32.3,
+   "R": 57.1,
+   "raw": [
+    [
+     "Republican",
+     true,
+     57.1
+    ],
+    [
+     "Democratic",
+     false,
+     32.3
+    ],
+    [
+     "Independent",
+     false,
+     7.6
+    ],
+    [
+     "Libertarian",
+     false,
+     1.6
+    ]
+   ]
+  },
+  "Illinois": {
+   "winner": "Democratic",
+   "D": 59.8,
+   "R": 36.8,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     59.8
+    ],
+    [
+     "Republican",
+     false,
+     36.8
+    ],
+    [
+     "Independent",
+     false,
+     3.4
+    ]
+   ]
+  },
+  "Iowa": {
+   "winner": "Democratic",
+   "D": 55.5,
+   "R": 44.5,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     55.5
+    ],
+    [
+     "Republican",
+     false,
+     44.5
+    ]
+   ]
+  },
+  "Kansas": {
+   "winner": null,
+   "D": 50.3,
+   "R": 49.7,
+   "raw": [
+    [
+     "Democratic",
+     false,
+     50.3
+    ],
+    [
+     "Republican",
+     false,
+     49.7
+    ]
+   ]
+  },
+  "Maine": {
+   "winner": null,
+   "D": 0,
+   "R": 0,
+   "raw": []
+  },
+  "Maryland": {
+   "winner": "Democratic",
+   "D": 62.8,
+   "R": 33.2,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     62.8
+    ],
+    [
+     "Republican",
+     false,
+     33.2
+    ],
+    [
+     "Green",
+     false,
+     2.1
+    ],
+    [
+     "Working Class",
+     false,
+     2.0
+    ]
+   ]
+  },
+  "Massachusetts": {
+   "winner": "Democratic",
+   "D": 62.2,
+   "R": 34.5,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     62.2
+    ],
+    [
+     "Republican",
+     false,
+     34.5
+    ],
+    [
+     "Independent",
+     false,
+     3.3
+    ]
+   ]
+  },
+  "Michigan": {
+   "winner": "Democratic",
+   "D": 54.5,
+   "R": 43.8,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     54.5
+    ],
+    [
+     "Republican",
+     false,
+     43.8
+    ]
+   ]
+  },
+  "Minnesota": {
+   "winner": "DFL",
+   "D": 55.5,
+   "R": 42.6,
+   "raw": [
+    [
+     "DFL",
+     true,
+     55.5
+    ],
+    [
+     "Republican",
+     false,
+     42.6
+    ],
+    [
+     "Green",
+     false,
+     1.8
+    ]
+   ]
+  },
+  "Nebraska": {
+   "winner": "Republican",
+   "D": 42.2,
+   "R": 50.8,
+   "raw": [
+    [
+     "Republican",
+     true,
+     50.8
+    ],
+    [
+     "Democratic",
+     false,
+     42.2
+    ],
+    [
+     "America First",
+     false,
+     4.4
+    ],
+    [
+     "Legal Marijuana Now",
+     false,
+     2.7
+    ]
+   ]
+  },
+  "Nevada": {
+   "winner": "Democratic",
+   "D": 51.5,
+   "R": 44.2,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     51.5
+    ],
+    [
+     "Republican",
+     false,
+     44.2
+    ],
+    [
+     "Independent",
+     false,
+     2.9
+    ],
+    [
+     "?",
+     false,
+     1.5
+    ]
+   ]
+  },
+  "New Hampshire": {
+   "winner": "Republican",
+   "D": 47.1,
+   "R": 51.4,
+   "raw": [
+    [
+     "Republican",
+     true,
+     51.4
+    ],
+    [
+     "Democratic",
+     false,
+     47.1
+    ],
+    [
+     "Libertarian",
+     false,
+     1.5
+    ]
+   ]
+  },
+  "New Mexico": {
+   "winner": "Democratic",
+   "D": 57.3,
+   "R": 42.7,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     57.3
+    ],
+    [
+     "Republican",
+     false,
+     42.7
+    ]
+   ]
+  },
+  "New York": {
+   "winner": null,
+   "D": 0,
+   "R": 0,
+   "raw": []
+  },
+  "Ohio": {
+   "winner": null,
+   "D": 0,
+   "R": 0,
+   "raw": []
+  },
+  "Oklahoma": {
+   "winner": "Republican",
+   "D": 45.9,
+   "R": 51.9,
+   "raw": [
+    [
+     "Republican",
+     true,
+     51.9
+    ],
+    [
+     "Democratic",
+     false,
+     45.9
+    ]
+   ]
+  },
+  "Oregon": {
+   "winner": "Democratic",
+   "D": 52.6,
+   "R": 44.5,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     52.6
+    ],
+    [
+     "Republican",
+     false,
+     44.5
+    ],
+    [
+     "Pacific Green",
+     false,
+     2.8
+    ]
+   ]
+  },
+  "Pennsylvania": {
+   "winner": "Democratic",
+   "D": 60.4,
+   "R": 38.3,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     60.4
+    ],
+    [
+     "Republican",
+     false,
+     38.3
+    ],
+    [
+     "Libertarian",
+     false,
+     1.3
+    ]
+   ]
+  },
+  "Rhode Island": {
+   "winner": "Democratic",
+   "D": 57.7,
+   "R": 13.2,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     57.7
+    ],
+    [
+     "Independent",
+     false,
+     27.8
+    ],
+    [
+     "Republican",
+     false,
+     13.2
+    ]
+   ]
+  },
+  "South Carolina": {
+   "winner": "Republican",
+   "D": 47.1,
+   "R": 51.6,
+   "raw": [
+    [
+     "Republican",
+     true,
+     51.6
+    ],
+    [
+     "Democratic",
+     false,
+     47.1
+    ],
+    [
+     "United Citizens",
+     false,
+     0.8
+    ],
+    [
+     "Green",
+     false,
+     0.4
+    ]
+   ]
+  },
+  "South Dakota": {
+   "winner": "Republican",
+   "D": 36.5,
+   "R": 63.5,
+   "raw": [
+    [
+     "Republican",
+     true,
+     63.5
+    ],
+    [
+     "Democratic",
+     false,
+     36.5
+    ]
+   ]
+  },
+  "Tennessee": {
+   "winner": "Republican",
+   "D": 43.0,
+   "R": 45.5,
+   "raw": [
+    [
+     "Republican",
+     true,
+     45.5
+    ],
+    [
+     "Democratic",
+     false,
+     43.0
+    ],
+    [
+     "Independent",
+     false,
+     9.3
+    ]
+   ]
+  },
+  "Texas": {
+   "winner": "Democratic",
+   "D": 52.8,
+   "R": 45.7,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     52.8
+    ],
+    [
+     "Republican",
+     false,
+     45.7
+    ],
+    [
+     "Libertarian",
+     false,
+     1.5
+    ]
+   ]
+  },
+  "Vermont": {
+   "winner": "Republican",
+   "D": 45.6,
+   "R": 52.6,
+   "raw": [
+    [
+     "Republican",
+     true,
+     52.6
+    ],
+    [
+     "Democratic",
+     false,
+     45.6
+    ]
+   ]
+  },
+  "Wisconsin": {
+   "winner": "Democratic",
+   "D": 54.0,
+   "R": 46.0,
+   "raw": [
+    [
+     "Democratic",
+     true,
+     54.0
+    ],
+    [
+     "Republican",
+     false,
+     46.0
+    ]
+   ]
+  },
+  "Wyoming": {
+   "winner": "Republican",
+   "D": 14.7,
+   "R": 68.6,
+   "raw": [
+    [
+     "Republican",
+     true,
+     68.6
+    ],
+    [
+     "Constitution",
+     false,
+     16.8
+    ],
+    [
+     "Democratic",
+     false,
+     14.7
+    ]
+   ]
+  }
+ },
+ "leg": {
+  "Alabama": {},
+  "Alaska": {
+   "Alaska Senate": {
+    "Democratic": [
+     9,
+     null
+    ],
+    "Republican": [
+     5,
+     null
+    ]
+   },
+   "Alaska House of Representatives": {
+    "Democratic": [
+     14,
+     null
+    ],
+    "Independent": [
+     5,
+     null
+    ],
+    "Republican": [
+     2,
+     null
+    ]
+   }
+  },
+  "Arizona": {
+   "Arizona Senate": {
+    "Republican": [
+     17,
+     10
+    ],
+    "Democratic": [
+     13,
+     20
+    ]
+   },
+   "Arizona House of Representatives": {
+    "Republican": [
+     33,
+     null
+    ],
+    "Democratic": [
+     27,
+     null
+    ]
+   }
+  },
+  "Arkansas": {},
+  "California": {
+   "California Senate": {
+    "Democratic": [
+     30,
+     null
+    ],
+    "Republican": [
+     10,
+     null
+    ]
+   },
+   "California Assembly": {
+    "Democratic": [
+     60,
+     null
+    ],
+    "Republican": [
+     20,
+     null
+    ]
+   }
+  },
+  "Colorado": {},
+  "Connecticut": {},
+  "Delaware": {
+   "Delaware State Senate": {
+    "Democratic": [
+     15,
+     15
+    ],
+    "Republican": [
+     6,
+     6
+    ]
+   },
+   "Delaware House of Representatives": {
+    "Democratic": [
+     27,
+     30
+    ],
+    "Republican": [
+     14,
+     11
+    ]
+   }
+  },
+  "Florida": {},
+  "Georgia": {},
+  "Hawaii": {},
+  "Idaho": {
+   "Idaho Senate": {
+    "Republican": [
+     29,
+     28
+    ],
+    "Democratic": [
+     6,
+     7
+    ]
+   },
+   "Idaho House of Representatives": {
+    "Republican": [
+     61,
+     56
+    ],
+    "Democratic": [
+     9,
+     14
+    ]
+   }
+  },
+  "Illinois": {
+   "Illinois Senate": {
+    "Democratic": [
+     40,
+     null
+    ],
+    "Republican": [
+     19,
+     null
+    ]
+   },
+   "Illinois House of Representatives": {
+    "Democratic": [
+     78,
+     null
+    ],
+    "Republican": [
+     40,
+     null
+    ]
+   }
+  },
+  "Indiana": {
+   "Indiana Senate": {
+    "Republican": [
+     40,
+     null
+    ],
+    "Democratic": [
+     10,
+     null
+    ]
+   },
+   "Indiana House of Representatives": {
+    "Republican": [
+     69,
+     54
+    ],
+    "Democratic": [
+     30,
+     46
+    ]
+   }
+  },
+  "Iowa": {
+   "Iowa Senate": {
+    "Republican": [
+     33,
+     null
+    ],
+    "Democratic": [
+     17,
+     null
+    ]
+   },
+   "Iowa House of Representatives": {
+    "Republican": [
+     67,
+     null
+    ],
+    "Democratic": [
+     33,
+     null
+    ]
+   }
+  },
+  "Kansas": {},
+  "Kentucky": {
+   "Kentucky Senate": {
+    "Republican": [
+     32,
+     30
+    ],
+    "Democratic": [
+     6,
+     8
+    ]
+   },
+   "Kentucky House of Representatives": {
+    "Republican": [
+     80,
+     74
+    ],
+    "Democratic": [
+     20,
+     26
+    ]
+   }
+  },
+  "Maine": {},
+  "Maryland": {
+   "Maryland Senate": {
+    "Democratic": [
+     34,
+     35
+    ],
+    "Republican": [
+     13,
+     12
+    ]
+   },
+   "Maryland House of Delegates": {
+    "Democratic": [
+     102,
+     null
+    ],
+    "Republican": [
+     39,
+     null
+    ]
+   }
+  },
+  "Massachusetts": {},
+  "Michigan": {},
+  "Minnesota": {},
+  "Missouri": {
+   "Missouri Senate": {
+    "Republican": [
+     24,
+     22
+    ],
+    "Democratic": [
+     10,
+     12
+    ]
+   },
+   "Missouri House of Representatives": {
+    "Republican": [
+     111,
+     null
+    ],
+    "Democratic": [
+     52,
+     null
+    ]
+   }
+  },
+  "Montana": {
+   "Montana Senate": {
+    "Republican": [
+     32,
+     30
+    ],
+    "Democratic": [
+     18,
+     20
+    ]
+   },
+   "Montana House of Representatives": {
+    "Republican": [
+     58,
+     null
+    ],
+    "Democratic": [
+     42,
+     null
+    ]
+   }
+  },
+  "Nebraska": {},
+  "Nevada": {
+   "Nevada Senate": {
+    "Democratic": [
+     13,
+     13
+    ],
+    "Republican": [
+     8,
+     8
+    ]
+   },
+   "Nevada Assembly": {
+    "Democratic": [
+     27,
+     null
+    ],
+    "Republican": [
+     15,
+     null
+    ]
+   }
+  },
+  "New Hampshire": {},
+  "New Mexico": {},
+  "New York": {},
+  "North Carolina": {
+   "North Carolina Senate": {
+    "Republican": [
+     30,
+     null
+    ],
+    "Democratic": [
+     20,
+     null
+    ]
+   },
+   "North Carolina House of Representatives": {
+    "Democratic": [
+     47,
+     71
+    ],
+    "Republican": [
+     71,
+     48
+    ],
+    "Independent": [
+     2,
+     1
+    ]
+   }
+  },
+  "North Dakota": {},
+  "Ohio": {
+   "Ohio Senate": {
+    "Republican": [
+     24,
+     22
+    ],
+    "Democratic": [
+     9,
+     11
+    ]
+   },
+   "Ohio House of Representatives": {
+    "Republican": [
+     65,
+     null
+    ],
+    "Democratic": [
+     34,
+     null
+    ]
+   }
+  },
+  "Oklahoma": {},
+  "Oregon": {
+   "Oregon State Senate": {
+    "Democratic": [
+     18,
+     null
+    ],
+    "Republican": [
+     12,
+     null
+    ]
+   },
+   "Oregon House of Representatives": {
+    "Democratic": [
+     37,
+     null
+    ],
+    "Republican": [
+     23,
+     null
+    ]
+   }
+  },
+  "Pennsylvania": {},
+  "Rhode Island": {
+   "Rhode Island Senate": {
+    "Democratic": [
+     34,
+     36
+    ],
+    "Republican": [
+     4,
+     2
+    ]
+   },
+   "Rhode Island House of Representatives": {
+    "Democratic": [
+     64,
+     null
+    ],
+    "Republican": [
+     10,
+     null
+    ],
+    "Independent": [
+     1,
+     null
+    ]
+   }
+  },
+  "South Carolina": {},
+  "South Dakota": {
+   "South Dakota Senate": {
+    "Republican": [
+     32,
+     null
+    ],
+    "Democratic": [
+     3,
+     null
+    ]
+   },
+   "South Dakota House of Representatives": {
+    "Republican": [
+     65,
+     59
+    ],
+    "Democratic": [
+     5,
+     10
+    ],
+    "Independent": [
+     0,
+     1
+    ]
+   }
+  },
+  "Tennessee": {
+   "Tennessee Senate": {
+    "Republican": [
+     27,
+     27
+    ],
+    "Democratic": [
+     6,
+     6
+    ]
+   },
+   "Tennessee House of Representatives": {
+    "Republican": [
+     75,
+     69
+    ],
+    "Democratic": [
+     24,
+     30
+    ]
+   }
+  },
+  "Texas": {},
+  "Utah": {
+   "Utah Senate": {
+    "Republican": [
+     22,
+     null
+    ],
+    "Democratic": [
+     6,
+     null
+    ],
+    "Forward": [
+     1,
+     null
+    ]
+   },
+   "Utah House of Representatives": {
+    "Republican": [
+     61,
+     null
+    ],
+    "Democratic": [
+     14,
+     null
+    ],
+    "Independent": [
+     0,
+     2
+    ]
+   }
+  },
+  "Vermont": {
+   "Vermont Senate": {
+    "Democratic": [
+     16,
+     20
+    ],
+    "Republican": [
+     13,
+     8
+    ],
+    "Progressive": [
+     1,
+     1
+    ],
+    "Independent": [
+     0,
+     1
+    ]
+   },
+   "Vermont House of Representatives": {
+    "Democratic": [
+     87,
+     null
+    ],
+    "Republican": [
+     56,
+     null
+    ],
+    "Progressive": [
+     3,
+     null
+    ],
+    "Independent": [
+     4,
+     null
+    ]
+   }
+  },
+  "Washington": {
+   "Washington State Senate": {
+    "Democratic": [
+     30,
+     31
+    ],
+    "Republican": [
+     19,
+     18
+    ]
+   },
+   "Washington House of Representatives": {
+    "Democratic": [
+     59,
+     66
+    ],
+    "Republican": [
+     39,
+     32
+    ]
+   }
+  },
+  "West Virginia": {},
+  "Wisconsin": {
+   "Wisconsin Senate": {
+    "Democratic": [
+     15,
+     18
+    ],
+    "Republican": [
+     18,
+     15
+    ]
+   },
+   "Wisconsin State Assembly": {
+    "Democratic": [
+     45,
+     53
+    ],
+    "Republican": [
+     54,
+     46
+    ]
+   }
+  },
+  "Wyoming": {},
+  "American Samoa": {},
+  "District of Columbia": {},
+  "Guam": {
+   "Guam Legislature": {
+    "Republican": [
+     9,
+     8
+    ],
+    "Democratic": [
+     6,
+     7
+    ]
+   }
+  },
+  "Northern Mariana Islands": {
+   "Northern Mariana Islands Senate": {
+    "Republican": [
+     4,
+     5
+    ],
+    "Independent": [
+     4,
+     2
+    ],
+    "Democratic": [
+     1,
+     2
+    ]
+   },
+   "Northern Mariana Islands House of Representatives": {
+    "Democratic": [
+     12,
+     1
+    ],
+    "Independent": [
+     2,
+     null
+    ],
+    "Republican": [
+     4,
+     5
+    ]
+   },
+   "Virgin Islands Legislature": {
+    "Democratic": [
+     12,
+     10
+    ],
+    "Independent": [
+     3,
+     5
+    ],
+    "percentage points": [
+     15,
+     15
+    ]
+   }
+  },
+  "Louisiana": {},
+  "Mississippi": {},
+  "Virginia": {}
+ }
+}

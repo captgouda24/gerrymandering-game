@@ -1,0 +1,13 @@
+{
+ "pres_party_margin_midterm": -5.2,
+ "pres_party_margin_presyear": -2.0142857142857142,
+ "sd_national_margin": 6.254651602340987,
+ "sd_national_swing": 8.675837990371006,
+ "sd_state_swing_dev": 4.01943677973544,
+ "sd_district_swing_resid": 8.367163241942391,
+ "incumbency_coef": 1.6991600575599355,
+ "seat_flip_rate": 0.06555841723249825,
+ "open_seat_rate": 0.11485380116959065,
+ "sd_state_drift_4cycles": 9.092494770381865,
+ "sd_district_within_state": 31.595920306991378
+}

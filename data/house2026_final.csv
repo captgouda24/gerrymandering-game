@@ -1,0 +1,436 @@
+state,district,pvi,inc_party,status,winner,n_aye,cands,key,pm_R,pm_D,pm_closed,call,source,p_R
+AL,1,17,,New member elected.<br>'''Republican gain.''',Republican,1,Jerry Carl (R); Clyde Jones Jr. (D),AL-01,1.0,0.0,True,R,AP,1.0
+AL,2,7,Democratic,Incumbent re-elected.,Democratic,1,Shomari Figures (D); Rhett Marques (R),AL-02,0.0,1.0,True,D,AP,0.0
+AL,3,23,Republican,Incumbent re-elected.,Republican,1,Mike Rogers (R); Lee McInnis (D),AL-03,1.0,0.0,True,R,AP,1.0
+AL,4,33,Republican,Incumbent re-elected.,Republican,1,Robert Aderholt (R); Amanda Pusczek (D),AL-04,1.0,0.0,True,R,AP,1.0
+AL,5,15,Republican,Incumbent re-elected.,Republican,1,Dale Strong (R); Andrew Sneed (D),AL-05,1.0,0.0,True,R,AP,1.0
+AL,6,17,Republican,Incumbent re-elected.,Republican,1,Gary Palmer (R); Maurice Mercer (D),AL-06,1.0,0.0,True,R,AP,1.0
+AL,7,-10,Democratic,Incumbent re-elected.,Democratic,1,Terri Sewell (D); Ammie Akin (R),AL-07,0.0,1.0,True,D,AP,0.0
+AK,AL,6,Republican,Incumbent advanced to general,,0,Nick Begich III (R); Eric Hafner (D); Bill Hill (I),AK-AL,0.9175,0.0005,False,R,PM,0.9994553376906319
+AZ,1,1,Republican,"Incumbent retired to [[2026 Arizona gubernatorial election|run for governor]].<ref name=""Schweikert""/><br>'''Democratic gain.'''",Democratic,1,Amish Shah (D); Jay Feely (R),AZ-01,0.0,1.0,True,D,AP,0.0
+AZ,2,7,Republican,Incumbent re-elected.,Republican,1,Eli Crane (R); Jonathan Nez (D),AZ-02,1.0,0.0,True,R,AP,1.0
+AZ,3,-22,Democratic,Incumbent re-elected.,Democratic,1,Yassamin Ansari (D),AZ-03,0.0,1.0,True,D,AP,0.0
+AZ,4,-4,Democratic,Incumbent re-elected.,Democratic,1,Greg Stanton (D); Zuhdi Jasser (R),AZ-04,0.0,1.0,True,D,AP,0.0
+AZ,5,10,Republican,"Incumbent retired to [[2026 Arizona gubernatorial election|run for governor]].<ref name=""Biggs""/><br>Republican hold.",Republican,1,Mark Lamb (R); Elizabeth Lee (D),AZ-05,1.0,0.0,True,R,AP,1.0
+AZ,6,0,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,JoAnna Mendoza (D); Juan Ciscomani (R),AZ-06,0.0,1.0,True,D,AP,0.0
+AZ,7,-13,Democratic,Incumbent re-elected.,Democratic,1,Adelita Grijalva (D); Daniel Butierez (R),AZ-07,0.0,1.0,True,D,AP,0.0
+AZ,8,8,Republican,Incumbent re-elected.,Republican,1,Abraham Hamadeh (R); Bernadette Greene-Placentia (D),AZ-08,1.0,0.0,True,R,AP,1.0
+AZ,9,15,Republican,Incumbent re-elected.,Republican,1,Paul Gosar (R); Dani Sterbinsky (D),AZ-09,1.0,0.0,True,R,AP,1.0
+AR,1,23,Republican,Incumbent re-elected.,Republican,1,Rick Crawford (R); Terri Green (D),AR-01,1.0,0.0,True,R,AP,1.0
+AR,2,8,Republican,Incumbent re-elected.,Republican,1,French Hill (R); Chris Jones (D),AR-02,1.0,0.0,True,R,AP,1.0
+AR,3,13,Republican,Incumbent re-elected.,Republican,1,Steve Womack (R); Robb Ryerse (D),AR-03,1.0,0.0,True,R,AP,1.0
+AR,4,20,Republican,Incumbent re-elected.,Republican,1,Bruce Westerman (R); James Russell (D),AR-04,1.0,0.0,True,R,AP,1.0
+CA,1,-7,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,Mike McGuire (D); James Gallagher (R),CA-01,0.0,1.0,True,D,AP,0.0
+CA,2,-13,Democratic,Incumbent re-elected.,Democratic,1,Jared Huffman (D); Robin Littau (R),CA-02,0.0,1.0,True,D,AP,0.0
+CA,3,-6,Democratic,Incumbent re-elected.,Democratic,1,Ami Bera (D); Robb Tucker (R),CA-03,0.0,1.0,True,D,AP,0.0
+CA,4,-8,Democratic,Incumbent advanced to general.,,0,Eric Jones (D); Mike Thompson (D),CA-04,0.0015,0.974,False,D,PM,0.0015376729882111738
+CA,5,10,Republican,Incumbent re-elected.,Republican,1,Tom McClintock (R); Michael Masuda (D),CA-05,1.0,0.0,True,R,AP,1.0
+CA,6,-5,Independent,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,Richard Pan (D); Kevin Kiley (I),CA-06,0.0,1.0,True,D,AP,0.0
+CA,7,-7,Democratic,Incumbent advanced to general.,,0,Doris Matsui (D); Mai Vang (D),CA-07,0.002,0.998,False,D,PM,0.002
+CA,8,-19,Democratic,Incumbent re-elected.,Democratic,1,John Garamendi (D); Rudy Recile (R),CA-08,0.0,1.0,True,D,AP,0.0
+CA,9,-8,Democratic,Incumbent re-elected.,Democratic,1,Josh Harder (D); John McBride (R),CA-09,0.0,1.0,True,D,AP,0.0
+CA,10,-18,Democratic,Incumbent re-elected.,Democratic,1,Mark DeSaulnier (D); Jeff Frese (R),CA-10,0.0,1.0,True,D,AP,0.0
+CA,11,-36,Democratic,"Incumbent retired.<ref name=""Pelosi""/><br />Democratic hold.",Democratic,1,Scott Wiener (D); Connie Chan (D),CA-11,0.0,1.0,True,D,AP,0.0
+CA,12,-39,Democratic,Incumbent re-elected.,Democratic,1,Lateefah Simon (D); Jamie Joyce (D),CA-12,0.0,1.0,True,D,AP,0.0
+CA,13,-2,Democratic,Incumbent re-elected.,Democratic,1,Adam Gray (D); Kevin Lincoln (R),CA-13,0.0,1.0,True,D,AP,0.0
+CA,14,-19,Democratic,Incumbent re-elected.,Democratic,1,Aisha Wahab (D); Melissa Hernandez (D),CA-14,0.0,1.0,True,D,AP,0.0
+CA,15,-26,Democratic,Incumbent re-elected.,Democratic,1,Kevin Mullin (D); Charles Hoelter (R),CA-15,0.0,1.0,True,D,AP,0.0
+CA,16,-25,Democratic,Incumbent re-elected.,Democratic,1,Sam Liccardo (D); Peter Soulé (R),CA-16,0.0,1.0,True,D,AP,0.0
+CA,17,-21,Democratic,Incumbent re-elected.,Democratic,1,Ro Khanna (D); Ritesh Tandon (R),CA-17,0.0,1.0,True,D,AP,0.0
+CA,18,-16,Democratic,Incumbent re-elected.,Democratic,1,Zoe Lofgren (D); Shane Lewis (R),CA-18,0.0,1.0,True,D,AP,0.0
+CA,19,-18,Democratic,Incumbent re-elected.,Democratic,1,Jimmy Panetta (D); Peter Coe Verbica (R),CA-19,0.0,1.0,True,D,AP,0.0
+CA,20,16,Republican,Incumbent re-elected.,Republican,1,Vince Fong (R); Sandra Van Scotter (D),CA-20,1.0,0.0,True,R,AP,1.0
+CA,21,-5,Democratic,Incumbent re-elected.,Democratic,1,Jim Costa (D); Kyle Kirkland (R),CA-21,0.0,1.0,True,D,AP,0.0
+CA,22,-1,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,Randy Villegas (D); David Valadao (R),CA-22,0.0,1.0,True,D,AP,0.0
+CA,23,9,Republican,Incumbent advanced to general.,,0,Tessa Lynn Hodge (D); Jay Obernolte (R),CA-23,0.98,0.0215,False,R,PM,0.9785322016974537
+CA,24,-13,Democratic,Incumbent re-elected.,Democratic,1,Salud Carbajal (D); Bob Smith (R),CA-24,0.0,1.0,True,D,AP,0.0
+CA,25,-4,Democratic,Incumbent re-elected.,Democratic,1,Raul Ruiz (D); Joe Males (R),CA-25,0.0,1.0,True,D,AP,0.0
+CA,26,-9,Democratic,"Incumbent retired.<ref name=""Brownley""/><br>Democratic hold.",Democratic,1,Jacqui Irwin (D); Sam Gallucci (R),CA-26,0.0,1.0,True,D,AP,0.0
+CA,27,-6,Democratic,Incumbent re-elected.,Democratic,1,George T. Whitesides (D); Jason Gibbs (R),CA-27,0.0,1.0,True,D,AP,0.0
+CA,28,-14,Democratic,Incumbent re-elected.,Democratic,1,Judy Chu (D); April Verlato (R),CA-28,0.0,1.0,True,D,AP,0.0
+CA,29,-19,Democratic,Incumbent re-elected.,Democratic,1,Luz Rivas (D); Angelica Dueñas (D),CA-29,0.0,1.0,True,D,AP,0.0
+CA,30,-21,Democratic,Incumbent re-elected.,Democratic,1,Laura Friedman (D); Scott Meyers (R),CA-30,0.0,1.0,True,D,AP,0.0
+CA,31,-8,Democratic,Incumbent re-elected.,Democratic,1,Gil Cisneros (D); Eric Ching (R),CA-31,0.0,1.0,True,D,AP,0.0
+CA,32,-14,Democratic,Incumbent re-elected.,Democratic,1,Brad Sherman (D); Larry Thompson (R),CA-32,0.0,1.0,True,D,AP,0.0
+CA,33,-7,Democratic,Incumbent re-elected.,Democratic,1,Pete Aguilar (D); Stephanie Vargas (R),CA-33,0.0,1.0,True,D,AP,0.0
+CA,34,-28,Democratic,Incumbent lost re-election.<br>Democratic hold.,Democratic,1,Angela Gonzales-Torres (D); Jimmy Gomez (D),CA-34,0.0,1.0,True,D,AP,0.0
+CA,35,-6,Democratic,Incumbent re-elected.,Democratic,1,Norma Torres (D); Mike Cargile (R),CA-35,0.0,1.0,True,D,AP,0.0
+CA,36,-21,Democratic,Incumbent re-elected.,Democratic,1,Ted Lieu (D); Houston Brignano (R),CA-36,0.0,1.0,True,D,AP,0.0
+CA,37,-33,Democratic,Incumbent re-elected.,Democratic,1,Sydney Kamlager-Dove (D); Samantha Mota (D),CA-37,0.0,1.0,True,D,AP,0.0
+CA,38,-8,,New member elected.<br>'''Democratic gain.''',Democratic,1,Hilda Solis (D); Pedro Casas (R),CA-38,0.0,1.0,True,D,AP,0.0
+CA,39,-7,Democratic,Incumbent re-elected.,Democratic,1,Mark Takano (D); Steve Manos (R),CA-39,0.0,1.0,True,D,AP,0.0
+CA,40,6,Republican,Incumbent lost re-election.<br>Republican loss.,Republican,1,Ken Calvert (R); Young Kim (R),CA-40,,,,R,AP,1.0
+CA,41,-9,Democratic,Incumbent re-elected.,Democratic,1,Linda Sánchez (D); Mitch Clemmons (R),CA-41,0.0,1.0,True,D,AP,0.0
+CA,42,-8,Democratic,Incumbent re-elected.,Democratic,1,Robert Garcia (D); Brian Burley (R),CA-42,0.0,1.0,True,D,AP,0.0
+CA,43,-27,Democratic,Incumbent re-elected.,Democratic,1,Maxine Waters (D); Cristian Morales (R),CA-43,0.0,1.0,True,D,AP,0.0
+CA,44,-20,Democratic,Incumbent re-elected.,Democratic,1,Nanette Barragán (D); Genevieve Angel (R),CA-44,0.0,1.0,True,D,AP,0.0
+CA,45,-3,Democratic,Incumbent re-elected.,Democratic,1,Derek Tran (D); Chuong Vo (R),CA-45,0.0,1.0,True,D,AP,0.0
+CA,46,-10,Democratic,Incumbent re-elected.,Democratic,1,Lou Correa (D); David Pan (R),CA-46,0.0,1.0,True,D,AP,0.0
+CA,47,-6,Democratic,Incumbent re-elected.,Democratic,1,Dave Min (D); Jenny Le Roux (R),CA-47,0.0,1.0,True,D,AP,0.0
+CA,48,-2,Republican,"Incumbent retired.<ref name=""Issa""/><br>'''Democratic gain.'''",Democratic,1,Marni von Wilpert (D); Jim Desmond (R),CA-48,0.0,1.0,True,D,AP,0.0
+CA,49,-7,Democratic,Incumbent re-elected.,Democratic,1,Mike Levin (D); Armen Kurdian (R),CA-49,0.0,1.0,True,D,AP,0.0
+CA,50,-10,Democratic,Incumbent re-elected.,Democratic,1,Scott Peters (D); Steve Cohen (R),CA-50,0.0,1.0,True,D,AP,0.0
+CA,51,-10,Democratic,Incumbent re-elected.,Democratic,1,Sara Jacobs (D); Ricardo Cabrera (R),CA-51,0.0,1.0,True,D,AP,0.0
+CA,52,-11,Democratic,Incumbent re-elected.,Democratic,1,Juan Vargas (D); Jeff Belle (R),CA-52,0.0,1.0,True,D,AP,0.0
+CO,1,-29,Democratic,Incumbent lost renomination.<br>Democratic hold.,Democratic,1,Melat Kiros (D); Christy Peterson (R); Shimon Blau (I),CO-01,0.0,1.0,True,D,AP,0.0
+CO,2,-20,Democratic,Incumbent re-elected.,Democratic,1,Joe Neguse (D); Kelley Dennison (R),CO-02,0.0,1.0,True,D,AP,0.0
+CO,3,5,Republican,Incumbent re-elected.,Republican,1,Jeff Hurd (R); Dwayne Romero (D); Clifton Brown (I),CO-03,1.0,0.0,True,R,AP,1.0
+CO,4,9,Republican,Incumbent lost re-election.<br />'''Democratic gain.''',Democratic,1,Eileen Laubacher (D); Lauren Boebert (R),CO-04,0.007,0.993,False,D,AP,0.0
+CO,5,5,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,Jessica Killin (D); Jeff Crank (R),CO-05,0.0,1.0,True,D,AP,0.0
+CO,6,-11,Democratic,Incumbent re-elected.,Democratic,1,Jason Crow (D); Jason Clark (R); Samir Ezzeldin Witta (I),CO-06,0.0,1.0,True,D,AP,0.0
+CO,7,-8,Democratic,Incumbent re-elected.,Democratic,1,Brittany Pettersen (D); Tim Bennett (R); Joe Krzeczkowski (I),CO-07,0.0,1.0,True,D,AP,0.0
+CO,8,0,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,Manny Rutinel (D); Gabe Evans (R),CO-08,0.0,1.0,True,D,AP,0.0
+CT,1,-12,Democratic,Incumbent lost renomination.<br>Democratic hold.,Democratic,1,Luke Bronin (D); Amy Chai (R),CT-01,0.0,1.0,True,D,AP,0.0
+CT,2,-4,Democratic,Incumbent re-elected.,Democratic,1,Joe Courtney (D); George Austin (R),CT-02,0.0,1.0,True,D,AP,0.0
+CT,3,-8,Democratic,Incumbent re-elected.,Democratic,1,Rosa DeLauro (D); Chris Lancia (R); Thomas Egan (I),CT-03,0.0,1.0,True,D,AP,0.0
+CT,4,-13,Democratic,Incumbent re-elected.,Democratic,1,Jim Himes (D); Michael Goldstein (R); Benjamin Wesley (I),CT-04,0.0,1.0,True,D,AP,0.0
+CT,5,-3,Democratic,Incumbent re-elected.,Democratic,1,Jahana Hayes (D); Chris Shea (R),CT-05,0.0,1.0,True,D,AP,0.0
+DE,AL,-8,Democratic,Incumbent re-elected.,Democratic,1,Sarah McBride (D); Joseph Arminio (R),DE-AL,0.0,1.0,True,D,AP,0.0
+FL,1,18,Republican,Incumbent re-elected.,Republican,1,Jimmy Patronis (R); Gay Valimont (D); Tyler Davis (I),FL-01,1.0,0.0,True,R,AP,1.0
+FL,2,8,Republican,"Incumbent retired.<ref name=""DunnFL""/><br>Republican hold.",Republican,1,Austin Rogers (R); Amanda Green (D),FL-02,1.0,0.0,True,R,AP,1.0
+FL,3,10,Republican,Incumbent re-elected.,Republican,1,Kat Cammack (R); Seth Harp (D); Mike Klein (I),FL-03,1.0,0.0,True,R,AP,1.0
+FL,4,5,Republican,Incumbent re-elected.,Republican,1,Aaron Bean (R); LaShonda Holloway (D); Todd Schaefer (I),FL-04,1.0,0.0,True,R,AP,1.0
+FL,5,10,Republican,Incumbent re-elected.,Republican,1,John Rutherford (R); Rachel Grage (D),FL-05,1.0,0.0,True,R,AP,1.0
+FL,6,14,Republican,Incumbent re-elected.,Republican,1,Randy Fine (R); Eric Yonce (D); Michael Gist (I),FL-06,1.0,0.0,True,R,AP,1.0
+FL,7,5,Republican,"Incumbent lost renomination.<ref name=""Mills""/><br>Republican hold.",Republican,1,Ryan Elijah (R); Bale Dalton (D),FL-07,1.0,0.0,True,R,AP,1.0
+FL,8,8,Republican,Incumbent re-elected.,Republican,1,Mike Haridopolos (R); Jennifer Jenkins (D),FL-08,1.0,0.0,True,R,AP,1.0
+FL,9,8,Democratic,Incumbent re-elected.,Democratic,1,Darren Soto (D); Dan Green (R),FL-09,0.0,1.0,True,D,AP,0.0
+FL,10,-13,Democratic,Incumbent re-elected.,Democratic,1,Maxwell Frost (D),FL-10,0.0,1.0,True,D,AP,0.0
+FL,11,7,Republican,"Incumbent retired.<ref name=""Webster""/><br>Republican hold.",Republican,1,Joe Strada (R); James Pericola (D),FL-11,1.0,0.0,True,R,AP,1.0
+FL,12,7,Republican,Incumbent re-elected.,Republican,1,Gus Bilirakis (R); Kimberly Overman (D); Branden Scrivener (I),FL-12,1.0,0.0,True,R,AP,1.0
+FL,13,6,Republican,Incumbent re-elected.,Republican,1,Anna Paulina Luna (R); Leela Gray (D); Tony D'Arrigo (I),FL-13,1.0,0.0,True,R,AP,1.0
+FL,14,4,Democratic,Incumbent re-elected.,Democratic,1,Kathy Castor (D); Mike Beltran (R),FL-14,0.0,1.0,True,D,AP,0.0
+FL,15,9,Republican,Incumbent re-elected.,Republican,1,Laurel Lee (R); Robert People (D),FL-15,1.0,0.0,True,R,AP,1.0
+FL,16,6,Republican,"Incumbent retired.<ref name=""Buchanan""/><br>Republican hold.",Republican,1,Sydney Gruters (R); Kelly Kirschner (D); Mark Davis (I),FL-16,1.0,0.0,True,R,AP,1.0
+FL,17,10,Republican,Incumbent re-elected.,Republican,1,Greg Steube (R); Matthew Montavon (D); Michael Quirk (I),FL-17,1.0,0.0,True,R,AP,1.0
+FL,18,8,Republican,Incumbent re-elected.,Republican,1,Scott Franklin (R); Curtis Gibson (D); Deva Simmons (I),FL-18,1.0,0.0,True,R,AP,1.0
+FL,19,14,Republican,"Incumbent retired to [[2026 Florida gubernatorial election|run for governor]].<ref name=""Donalds""/><br>Republican hold.",Republican,1,Jim Schwartzel (R); Victor Arias (D); Seth Haskin (I),FL-19,1.0,0.0,True,R,AP,1.0
+FL,20,-20,,,Democratic,1,Debbie Wasserman Schultz (D); Brent Andersen (R),FL-20,0.0,1.0,True,D,AP,0.0
+FL,21,7,Republican,Incumbent re-elected.,Republican,1,Brian Mast (R); James Martin (D); Alexander Cooke (I),FL-21,1.0,0.0,True,R,AP,1.0
+FL,22,4,,New member elected.<br>'''Democratic gain.''',Democratic,1,Pia Dandiya (D); Casey Askar (R),FL-22,0.0,1.0,True,D,AP,0.0
+FL,23,-9,Democratic,Incumbent re-elected.,Democratic,1,Lois Frankel (D); Deborah Adeimy (R),FL-23,0.0,1.0,True,D,AP,0.0
+FL,24,-22,Democratic,"Incumbent retired.<ref name=""Wilson""/><br>Democratic hold.",Democratic,1,Oliver Gilbert (D); Te Mayonna Brown (R),FL-24,0.0,1.0,True,D,AP,0.0
+FL,25,3,Democratic,Incumbent re-elected.,Democratic,1,Jared Moskowitz (D); Scott Singer (R),FL-25,0.0,1.0,True,D,AP,0.0
+FL,26,7,Republican,Incumbent re-elected.,Republican,1,Mario Díaz-Balart (R); Nicole Locklin (D); Deborah Ann Meidinger Hosey (I),FL-26,1.0,0.0,True,R,AP,1.0
+FL,27,6,Republican,Incumbent re-elected.,Republican,1,María Elvira Salazar (R); Eliott Rodriguez (D),FL-27,0.9995,0.002,False,R,AP,1.0
+FL,28,10,Republican,Incumbent re-elected.,Republican,1,Carlos A. Giménez (R); Phil Ehr (D); Eddy Rojas (I),FL-28,1.0,0.0,True,R,AP,1.0
+GA,1,8,Republican,"Incumbent retired to [[2026 United States Senate election in Georgia|run for U.S. Senate]].<ref name=""BuddyCarter""/><br>Republican hold.",Republican,1,Jim Kingston (R); Amanda Hollowell (D),GA-01,1.0,0.0,True,R,AP,1.0
+GA,2,-4,Democratic,Incumbent re-elected.,Democratic,1,Sanford Bishop (D); Matt Day (R),GA-02,0.0,1.0,True,D,AP,0.0
+GA,3,15,Republican,Incumbent re-elected.,Republican,1,Brian Jack (R); Maura Keller (D),GA-03,1.0,0.0,True,R,AP,1.0
+GA,4,-27,Democratic,Incumbent re-elected.,Democratic,1,Hank Johnson (D); James Duffie (R),GA-04,0.0,1.0,True,D,AP,0.0
+GA,5,-36,Democratic,Incumbent re-elected.,Democratic,1,Nikema Williams (D); John Oscar Salvesen (R),GA-05,0.0,1.0,True,D,AP,0.0
+GA,6,-25,Democratic,Incumbent re-elected.,Democratic,1,Lucy McBath (D); Kevin Martin (R),GA-06,0.0,1.0,True,D,AP,0.0
+GA,7,11,Republican,Incumbent re-elected.,Republican,1,Rich McCormick (R); Tony Kozycki (D),GA-07,1.0,0.0,True,R,AP,1.0
+GA,8,15,Republican,Incumbent re-elected.,Republican,1,Austin Scott (R); Kelly Esti (D),GA-08,1.0,0.0,True,R,AP,1.0
+GA,9,17,Republican,Incumbent re-elected.,Republican,1,Andrew Clyde (R); Caitlyn Gegen (D),GA-09,1.0,0.0,True,R,AP,1.0
+GA,10,11,Republican,"Incumbent retired to [[2026 United States Senate election in Georgia|run for U.S. Senate]].<ref name=""CollinsGA""/><br>Republican hold.",Republican,1,Houston Gaines (R); Pam Delancy (D),GA-10,1.0,0.0,True,R,AP,1.0
+GA,11,12,Republican,"Incumbent retired.<ref name=""Loudermilk""/><br>Republican hold.",Republican,1,John Cowan (R); Chris Harden (D),GA-11,1.0,0.0,True,R,AP,1.0
+GA,12,7,Republican,Incumbent re-elected.,Republican,1,Rick Allen (R); Ceretta Smith (D),GA-12,1.0,0.0,True,R,AP,1.0
+GA,13,-21,Democratic,"Incumbent lost nomination for full term; later elected to complete unexpired term.<ref>{{cite web |date=August 25, 2026 |title=Everton Blair, Marcye Scott face ",Democratic,1,Jasmine Clark (D); Jonathan Chavez (R),GA-13,0.0,1.0,True,D,AP,0.0
+GA,14,19,Republican,Incumbent re-elected.,Republican,1,Clay Fuller (R); Shawn Harris (D),GA-14,1.0,0.0,True,R,AP,1.0
+HI,1,-13,Democratic,Incumbent re-elected.,Democratic,1,Ed Case (D); Adriel Lam (R); Nathan Berning (I),HI-01,0.0,1.0,True,D,AP,0.0
+HI,2,-12,Democratic,Incumbent re-elected.,Democratic,1,Jill Tokuda (D); Brenton Awa (R),HI-02,0.0,1.0,True,D,AP,0.0
+ID,1,22,Republican,Incumbent re-elected.,Republican,1,Russ Fulcher (R); Kaylee Peterson (D); Sarah Zabel (I),ID-01,1.0,0.0,True,R,AP,1.0
+ID,2,13,Republican,Incumbent re-elected.,Republican,1,Mike Simpson (R); Ellie Gilbreath (D); Tripp Hutchinson (I); Emre Houser (I),ID-02,1.0,0.0,True,R,AP,1.0
+IL,1,-18,Democratic,Incumbent re-elected.,Democratic,1,Jonathan Jackson (D); Christian Maxwell (R),IL-01,0.0,1.0,True,D,AP,0.0
+IL,2,-18,Democratic,"Incumbent retired to [[2026 United States Senate election in Illinois|run for U.S. Senate]].<ref name=""Robin""/><br>Democratic hold.",Democratic,1,Donna Miller (D); Michael Noack (R),IL-02,0.0,1.0,True,D,AP,0.0
+IL,3,-17,Democratic,Incumbent re-elected.,Democratic,1,Delia Ramirez (D); Angel Oakley (R),IL-03,0.0,1.0,True,D,AP,0.0
+IL,4,-17,Democratic,"Incumbent retired.<ref name=""Garcia""/><br>Democratic hold.",Democratic,1,Patty García (D); Lupe Castillo (R); Chris Getty (I),IL-04,0.0,1.0,True,D,AP,0.0
+IL,5,-19,Democratic,Incumbent re-elected.,Democratic,1,Mike Quigley (D); Tommy Hanson (R),IL-05,0.0,1.0,True,D,AP,0.0
+IL,6,-3,Democratic,Incumbent re-elected.,Democratic,1,Sean Casten (D); Niki Conforti (R),IL-06,0.0,1.0,True,D,AP,0.0
+IL,7,-34,Democratic,"Incumbent retired.<ref name=""DannyDavis""/><br>Democratic hold.",Democratic,1,La Shawn Ford (D); Chad Koppie (R),IL-07,0.0,1.0,True,D,AP,0.0
+IL,8,-5,Democratic,"Incumbent retired to [[2026 United States Senate election in Illinois|run for U.S. Senate]].<ref name=""Raja""/><br>Democratic hold.",Democratic,1,Melissa Bean (D); Jennifer Davis (R),IL-08,0.0,1.0,True,D,AP,0.0
+IL,9,-19,Democratic,"Incumbent retired.<ref name=""Schakowsky""/><br>Democratic hold.",Democratic,1,Daniel Biss (D); John Elleson (R),IL-09,0.0,1.0,True,D,AP,0.0
+IL,10,-12,Democratic,Incumbent re-elected.,Democratic,1,Brad Schneider (D); Carl Lambrecht (R),IL-10,0.0,1.0,True,D,AP,0.0
+IL,11,-6,Democratic,Incumbent re-elected.,Democratic,1,Bill Foster (D); Jeff Walter (R),IL-11,0.0,1.0,True,D,AP,0.0
+IL,12,22,Republican,Incumbent re-elected.,Republican,1,Mike Bost (R); Julie Fortier (D),IL-12,1.0,0.0,True,R,AP,1.0
+IL,13,-5,Democratic,Incumbent re-elected.,Democratic,1,Nikki Budzinski (D); Jeff Wilson (R),IL-13,0.0,1.0,True,D,AP,0.0
+IL,14,-3,Democratic,Incumbent re-elected.,Democratic,1,Lauren Underwood (D); James Marter (R),IL-14,0.0,1.0,True,D,AP,0.0
+IL,15,20,Republican,Incumbent re-elected.,Republican,1,Mary Miller (R); Jennifer Todd (D),IL-15,1.0,0.0,True,R,AP,1.0
+IL,16,11,Republican,Incumbent re-elected.,Republican,1,Darin LaHood (R); Paul Nolley (D),IL-16,1.0,0.0,True,R,AP,1.0
+IL,17,-3,Democratic,Incumbent re-elected.,Democratic,1,Eric Sorensen (D); Dillan Vancil (R),IL-17,0.0,1.0,True,D,AP,0.0
+IN,1,-1,Democratic,Incumbent re-elected.,Democratic,1,Frank J. Mrvan (D); Barb Regnitz (R),IN-01,0.0,1.0,True,D,AP,0.0
+IN,2,13,Republican,Incumbent re-elected.,Republican,1,Rudy Yakym (R); Jamee Decio (D),IN-02,1.0,0.0,True,R,AP,1.0
+IN,3,16,Republican,Incumbent re-elected.,Republican,1,Marlin Stutzman (R); Kelly Thompson (D),IN-03,1.0,0.0,True,R,AP,1.0
+IN,4,15,Republican,Incumbent re-elected.,Republican,1,Jim Baird (R); Drew Cox (D),IN-04,1.0,0.0,True,R,AP,1.0
+IN,5,8,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,J. D. Ford (D); Victoria Spartz (R),IN-05,0.0,1.0,True,D,AP,0.0
+IN,6,16,Republican,Incumbent re-elected.,Republican,1,Jefferson Shreve (R); Cinde Wirth (D),IN-06,1.0,0.0,True,R,AP,1.0
+IN,7,-21,Democratic,Incumbent re-elected.,Democratic,1,André Carson (D); Patrick McAuley (R),IN-07,0.0,1.0,True,D,AP,0.0
+IN,8,18,Republican,Incumbent re-elected.,Republican,1,Mark Messmer (R); Mary Allen (D),IN-08,1.0,0.0,True,R,AP,1.0
+IN,9,15,Republican,Incumbent re-elected.,Republican,1,Erin Houchin (R); Brad Meyer (D),IN-09,1.0,0.0,True,R,AP,1.0
+IA,1,4,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,Christina Bohannan (D); Mariannette Miller-Meeks (R); Michael Bridgford (I),IA-01,0.0,1.0,True,D,AP,0.0
+IA,2,4,Republican,"Incumbent retired to [[2026 United States Senate election in Iowa|run for U.S. Senate]].<ref name=""Hinson""/><br>'''Democratic gain.'''",Democratic,1,Lindsay James (D); Joe Mitchell (R); Dave Bushaw (I),IA-02,0.0,1.0,True,D,AP,0.0
+IA,3,2,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,Sarah Trone Garriott (D); Zach Nunn (R),IA-03,0.0,1.0,True,D,AP,0.0
+IA,4,15,Republican,"Incumbent retired to [[2026 Iowa gubernatorial election|run for governor]].<ref name=""Feenstra""/><br>Republican hold.",Republican,1,Chris McGowan (R); David Dawson (D),IA-04,1.0,0.0,True,R,AP,1.0
+KS,1,16,Republican,Incumbent re-elected.,Republican,1,Tracey Mann (R); Lauren Reinhold (D),KS-01,1.0,0.0,True,R,AP,1.0
+KS,2,10,Republican,Incumbent re-elected.,Republican,1,Derek Schmidt (R); Don Coover (D),KS-02,1.0,0.0,True,R,AP,1.0
+KS,3,-2,Democratic,Incumbent re-elected.,Democratic,1,Sharice Davids (D); Eric Jenkins (R),KS-03,0.0,1.0,True,D,AP,0.0
+KS,4,12,Republican,Incumbent re-elected.,Republican,1,Ron Estes (R); Katy Tyndell (D),KS-04,1.0,0.0,True,R,AP,1.0
+KY,1,23,Republican,Incumbent re-elected.,Republican,1,James Comer (R); Drew Williams (D),KY-01,1.0,0.0,True,R,AP,1.0
+KY,2,20,Republican,Incumbent re-elected.,Republican,1,Brett Guthrie (R); Megan Wingfield (D); Thomas Loecken (I),KY-02,1.0,0.0,True,R,AP,1.0
+KY,3,-10,Democratic,Incumbent re-elected.,Democratic,1,Morgan McGarvey (D); Maria Rodriquez (R),KY-03,0.0,1.0,True,D,AP,0.0
+KY,4,18,Republican,"Incumbent lost renomination.<ref name=""Massie""/><br>Republican hold.",Republican,1,Ed Gallrein (R); Melissa Strange (D),KY-04,1.0,0.0,True,R,AP,1.0
+KY,5,32,Republican,Incumbent re-elected.,Republican,1,Hal Rogers (R); Ned Pillersdorf (D); Mikel Wein (I); Gerardo Serrano (I),KY-05,1.0,0.0,True,R,AP,1.0
+KY,6,7,Republican,"Incumbent retired to [[2026 United States Senate election in Kentucky|run for U.S. Senate]].<ref name=""Barr"">{{cite web |last1=Horn |first1=Austin |title=Kentuc",Democratic,1,Zach Dembo (D); Ralph Alvarado (R); Jay Bowman (I),KY-06,0.0,1.0,True,D,AP,0.0
+LA,1,20,Republican,Incumbent re-elected.,Republican,1,Steve Scalise (R); Lauren Jewett (D); Randall Arrington (R); Liddy Glass (I),LA-01,1.0,0.0,True,R,AP,1.0
+LA,2,-25,Democratic,Incumbent re-elected.,Democratic,1,Troy Carter (D); Peter Williams (R); Renada Collins (D); Walter Beach (I),LA-02,0.0,1.0,True,D,AP,0.0
+LA,3,18,Republican,Incumbent re-elected.,Republican,1,Clay Higgins (R); John Day (D); Caleb Walker (D); Priscilla Gonzalez (D); Kate Cotten (R); Tia LeBrun (D),LA-03,1.0,0.0,True,R,AP,1.0
+LA,4,17,Republican,Incumbent re-elected.,Republican,1,Mike Johnson (R); Conrad Cable (D); Matt Gromlich (D); Mike Nichols (R); Gordon Heslop (R),LA-04,1.0,0.0,True,R,AP,1.0
+LA,5,17,Republican,"Incumbent retired to [[2026 United States Senate election in Louisiana|run for U.S. Senate]].<ref name=""Letlow""/>",,0,Patricia Moore (D); Gabe Firment (R); Misti Cordell (R); Michael Echols (R); Stewart Cathey Jr. (R); Antonio Wilson (D); Dan McKay (D); Austin Magee (R); Omar Dantzler (R); Gabe Firment (R); Patricia ,LA-05,0.917,0.0745,False,R,PM,0.9248613212304589
+LA,6,16,Democratic,"Incumbent retired to run for [[2026 United States state legislative elections#Louisiana|Louisiana State Senate]].<ref name=""Fields""/>",,0,Chauna Banks (D); Blake Miguez (R); Rick Edmonds (R); Lindsay Garcia (D); Stephen Wagley (R); Pat Forbes (D); Larry Davis (R); Monique Appeaning (R); Michael Mebruer (R); Chauna Banks (D); Blake Migue,LA-06,0.9295,0.073,False,R,PM,0.9271820448877806
+ME,1,-11,Democratic,Incumbent re-elected.,Democratic,1,Chellie Pingree (D); Ronald Russell (R),ME-01,0.0,1.0,True,D,AP,0.0
+ME,2,4,Democratic,Incumbent retired.<br>'''Republican gain.''',Republican,1,Paul LePage (R); Matthew Dunlap (D),ME-02,0.9945,0.0025,False,R,AP,1.0
+MD,1,8,Republican,Incumbent re-elected.,Republican,1,Andy Harris (R); Dan Schwartz (D),MD-01,1.0,0.0,True,R,AP,1.0
+MD,2,-10,Democratic,Incumbent re-elected.,Democratic,1,Johnny Olszewski (D); Dave Wallace (R),MD-02,0.0,1.0,True,D,AP,0.0
+MD,3,-12,Democratic,Incumbent re-elected.,Democratic,1,Sarah Elfreth (D); Berney Flowers (R),MD-03,0.0,1.0,True,D,AP,0.0
+MD,4,-39,Democratic,Incumbent re-elected.,Democratic,1,Glenn Ivey (D); George McDermott (R),MD-04,0.0,1.0,True,D,AP,0.0
+MD,5,-17,Democratic,"Incumbent retiring<ref name=""HoyerMD""/><br/>Democratic hold.",Democratic,1,Adrian Boafo (D); Chris Chaffee (R),MD-05,0.0,1.0,True,D,AP,0.0
+MD,6,-3,Democratic,Incumbent re-elected.,Democratic,1,April McClain Delaney (D); Robin Ficker (R),MD-06,0.0,1.0,True,D,AP,0.0
+MD,7,-31,Democratic,Incumbent re-elected.,Democratic,1,Kweisi Mfume (D); Scott Collier (R),MD-07,0.0,1.0,True,D,AP,0.0
+MD,8,-30,Democratic,Incumbent re-elected.,Democratic,1,Jamie Raskin (D); Cheryl Riley (R),MD-08,0.0,1.0,True,D,AP,0.0
+MA,1,-8,Democratic,Incumbent re-elected.,Democratic,1,Richard Neal (D); Nadia Milleron (I),MA-01,0.0,1.0,True,D,AP,0.0
+MA,2,-13,Democratic,Incumbent re-elected.,Democratic,1,Jim McGovern (D),MA-02,0.0,1.0,True,D,AP,0.0
+MA,3,-11,Democratic,Incumbent re-elected.,Democratic,1,Lori Trahan (D); Gary Grossi (R); Dennis Conlon (I),MA-03,0.0,1.0,True,D,AP,0.0
+MA,4,-11,Democratic,Incumbent re-elected.,Democratic,1,Jake Auchincloss (D); Thomas Stalcup (R),MA-04,0.0,1.0,True,D,AP,0.0
+MA,5,-24,Democratic,Incumbent re-elected.,Democratic,1,Katherine Clark (D),MA-05,0.0,1.0,True,D,AP,0.0
+MA,6,-11,Democratic,"Incumbent retired to [[2026 United States Senate election in Massachusetts|run for U.S. Senate]].<ref name=""Moulton""/><br>Democratic hold.",Democratic,1,Dan Koh (D); Micah Jones (R),MA-06,0.0,1.0,True,D,AP,0.0
+MA,7,-34,Democratic,Incumbent re-elected.,Democratic,1,Ayanna Pressley (D),MA-07,0.0,1.0,True,D,AP,0.0
+MA,8,-15,Democratic,Incumbent re-elected.,Democratic,1,Stephen Lynch (D); Robert Burke (R); Rasheed Walters (I),MA-08,0.0,1.0,True,D,AP,0.0
+MA,9,-6,Democratic,Incumbent re-elected.,Democratic,1,Bill Keating (D); Tyler MacAllister (R),MA-09,0.0,1.0,True,D,AP,0.0
+MI,1,11,Republican,Incumbent re-elected.,Republican,1,Jack Bergman (R); Callie Barr (D); Zebulon Featherly (I),MI-01,1.0,0.0,True,R,AP,1.0
+MI,2,15,Republican,Incumbent re-elected.,Republican,1,John Moolenaar (R); Ben Ambrose (D),MI-02,1.0,0.0,True,R,AP,1.0
+MI,3,-4,Democratic,Incumbent re-elected.,Democratic,1,Hillary Scholten (D); Terri DeBoer (R),MI-03,0.0,1.0,True,D,AP,0.0
+MI,4,3,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,Sean McCann (D); Bill Huizenga (R),MI-04,0.0,1.0,True,D,AP,0.0
+MI,5,13,Republican,Incumbent re-elected.,Republican,1,Tim Walberg (R); Christian Vukasovich (D),MI-05,1.0,0.0,True,R,AP,1.0
+MI,6,-12,Democratic,Incumbent re-elected.,Democratic,1,Debbie Dingell (D); Heather Smiley (R),MI-06,0.0,1.0,True,D,AP,0.0
+MI,7,0,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,William Lawrence (D); Tom Barrett (R),MI-07,0.0,1.0,True,D,AP,0.0
+MI,8,1,Democratic,Incumbent re-elected.,Democratic,1,Kristen McDonald Rivet (D); Thomas Smith (R),MI-08,0.0,1.0,True,D,AP,0.0
+MI,9,16,Republican,Incumbent re-elected.,Republican,1,Lisa McClain (R); Ray Pooley (D),MI-09,1.0,0.0,True,R,AP,1.0
+MI,10,3,Republican,"Incumbent retired to [[2026 Michigan gubernatorial election|run for governor]].<ref name=""jamesmi""/><br>'''Democratic gain'''.",Democratic,1,Christina Hines (D); Mike Bouchard Jr. (R),MI-10,0.0,1.0,True,D,AP,0.0
+MI,11,-9,Democratic,"Incumbent retiring to [[2026 United States Senate election in Michigan|run for U.S. Senate]].<ref name=""Stevens""/><br>Democratic hold.",Democratic,1,Jeremy Moss (D); Ethan Baker (R); Anil Kumar (I),MI-11,0.0,1.0,True,D,AP,0.0
+MI,12,-21,Democratic,Incumbent re-elected.,Democratic,1,Rashida Tlaib (D); James Hooper (R),MI-12,0.0,1.0,True,D,AP,0.0
+MI,13,-22,Democratic,Incumbent lost renomination.<br>Democratic hold.,Democratic,1,Donavan McKinney (D); T.&nbsp;P. Nykoriak (R),MI-13,0.0,1.0,True,D,AP,0.0
+MN,1,6,Republican,Incumbent renominated.,,0,Brad Finstad (R),MN-01,0.045,0.949,False,D,PM,0.04527162977867203
+MN,2,-3,,"Incumbent retiring to [[2026 United States Senate election in Minnesota|run for U.S. Senate]].<ref name=""Craig""/><br>DFL hold.",Democratic,1,Eric Pratt (R),MN-02,0.0,1.0,True,D,AP,0.0
+MN,3,-11,,Incumbent re-elected.,Democratic,1,Tyler Bass (R),MN-03,0.0,1.0,True,D,AP,0.0
+MN,4,-18,,Incumbent re-elected.,Democratic,1,Paul Wikstrom (R),MN-04,0.0,1.0,True,D,AP,0.0
+MN,5,-32,,Incumbent re-elected.,Democratic,1,John Nagel (R); DeVelle Jackson (I),MN-05,0.0,1.0,True,D,AP,0.0
+MN,6,10,Republican,Incumbent re-elected.,Republican,1,Tom Emmer (R),MN-06,1.0,0.0,True,R,AP,1.0
+MN,7,18,Republican,Incumbent re-elected.,Republican,1,Michelle Fischbach (R),MN-07,1.0,0.0,True,R,AP,1.0
+MN,8,7,Republican,Incumbent re-elected.,Republican,1,Pete Stauber (R),MN-08,1.0,0.0,True,R,AP,1.0
+MS,1,18,Republican,Incumbent re-elected.,Republican,1,Trent Kelly (R); Cliff Johnson (D),MS-01,1.0,0.0,True,R,AP,1.0
+MS,2,-11,Democratic,Incumbent re-elected.,Democratic,1,Bennie Thompson (D); Ron Eller (R); Bennie Foster (I),MS-02,0.0,1.0,True,D,AP,0.0
+MS,3,14,Republican,Incumbent re-elected.,Republican,1,Michael Guest (R); Michael Chiaradio (D),MS-03,1.0,0.0,True,R,AP,1.0
+MS,4,21,Republican,Incumbent re-elected.,Republican,1,Mike Ezell (R); Jeffrey Hulum III (D); Carl Boyanton (I),MS-04,1.0,0.0,True,R,AP,1.0
+MO,1,-29,Democratic,Incumbent re-elected.,Democratic,1,Wesley Bell (D); Paul Berry (R),MO-01,0.0,1.0,True,D,AP,0.0
+MO,2,4,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,Fred Wellman (D); Ann Wagner (R),MO-02,0.0,1.0,True,D,AP,0.0
+MO,3,13,Republican,Incumbent re-elected.,Republican,1,Bob Onder (R); Bethany Mann (D),MO-03,1.0,0.0,True,R,AP,1.0
+MO,4,21,Republican,Incumbent re-elected.,Republican,1,Mark Alford (R); Jordan Herrera (D),MO-04,1.0,0.0,True,R,AP,1.0
+MO,5,-12,Democratic,Incumbent re-elected.,Democratic,1,Emanuel Cleaver (D); Rick Brattin (R),MO-05,0.0,1.0,True,D,AP,0.0
+MO,6,19,Republican,"Incumbent retired.<ref name=""Graves""/><br>Republican hold.",Republican,1,Chris Stigall (R); Josh Smead (D),MO-06,1.0,0.0,True,R,AP,1.0
+MO,7,21,Republican,Incumbent re-elected.,Republican,1,Eric Burlison (R); Missi Hesketh (D),MO-07,1.0,0.0,True,R,AP,1.0
+MO,8,27,Republican,Incumbent re-elected.,Republican,1,Jason Smith (R); Chris Reichard (D),MO-08,1.0,0.0,True,R,AP,1.0
+MT,1,5,Republican,Incumbent retired.<br>'''Democratic gain'''.,Democratic,1,Sam Forstag (D); Aaron Flint (R),MT-01,0.0,1.0,True,D,AP,0.0
+MT,2,15,Republican,Incumbent re-elected.,Republican,1,Troy Downing (R); Brian Miller (D); Michael Eisenhauer (I),MT-02,1.0,0.0,True,R,AP,1.0
+NE,1,6,Republican,Incumbent re-elected.,Republican,1,Mike Flood (R); Chris Backemeyer (D),NE-01,1.0,0.0,True,R,AP,1.0
+NE,2,-3,Republican,"Incumbent retired.<ref name=""BaconNE""/><br>'''Democratic gain.'''",Democratic,1,Denise Powell (D); Brinker Harding (R),NE-02,0.0,1.0,True,D,AP,0.0
+NE,3,27,Republican,Incumbent re-elected.,Republican,1,Adrian Smith (R); Becky Stille (D); Mark Cohen (I),NE-03,1.0,0.0,True,R,AP,1.0
+NV,1,-2,Democratic,Incumbent re-elected.,Democratic,1,Dina Titus (D); Carrie Buck (R); Steven St. John (I); Bobby Khan (I),NV-01,0.0,1.0,True,D,AP,0.0
+NV,2,7,Republican,"Incumbent retired.<ref name=""Amodei""/><br>'''Democratic gain.'''",Democratic,1,Teresa Benitez-Thompson (D); David Flippo (R),NV-02,0.0,1.0,True,D,AP,0.0
+NV,3,-1,Democratic,Incumbent re-elected.,Democratic,1,Susie Lee (D); Martin O'Donnell (R),NV-03,0.0,1.0,True,D,AP,0.0
+NV,4,-2,Democratic,Incumbent re-elected.,Democratic,1,Steven Horsford (D); Cody Whipple (R); William Johnson (I),NV-04,0.0,1.0,True,D,AP,0.0
+NH,1,-2,Democratic,"Incumbent retired to [[2026 United States Senate election in New Hampshire|run for U.S. Senate]].<ref name=""Pappas""/><br>Democratic hold.",Democratic,1,Stefany Shaheen (D); Anthony DiLorenzo (R),NH-01,0.0,1.0,True,D,AP,0.0
+NH,2,-2,Democratic,Incumbent re-elected.,Democratic,1,Maggie Goodlander (D); Lily Tang Williams (R); Robbie Mahrou (I),NH-02,0.0,1.0,True,D,AP,0.0
+NJ,1,-10,Democratic,Incumbent re-elected.,Democratic,1,Donald Norcross (D); Damon Galdo (R),NJ-01,0.0,1.0,True,D,AP,0.0
+NJ,2,5,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,Zack Mullock (D); Jeff Van Drew (R); Ramon Mora Jr. (I),NJ-02,0.0,1.0,True,D,AP,0.0
+NJ,3,-5,Democratic,Incumbent re-elected.,Democratic,1,Herb Conaway (D); Michael McGuire (R); Ryan Kelly (I),NJ-03,0.0,1.0,True,D,AP,0.0
+NJ,4,14,Republican,Incumbent re-elected.,Republican,1,Chris Smith (R); Rachel Peace (D),NJ-04,1.0,0.0,True,R,AP,1.0
+NJ,5,-2,Democratic,Incumbent re-elected.,Democratic,1,Josh Gottheimer (D); Sean Kirrane (R); Adam Rueda (I),NJ-05,0.0,1.0,True,D,AP,0.0
+NJ,6,-5,Democratic,Incumbent re-elected.,Democratic,1,Frank Pallone (D); Hillary Herzig (R),NJ-06,0.0,1.0,True,D,AP,0.0
+NJ,7,0,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,Rebecca Bennett (D); Thomas Kean Jr. (R); Seamus O'Toole (I),NJ-07,0.0,1.0,True,D,AP,0.0
+NJ,8,-15,Democratic,Incumbent re-elected.,Democratic,1,Rob Menendez (D); Aristotle Eliopoulos (I); Da'Shone Hughey (I),NJ-08,0.0,1.0,True,D,AP,0.0
+NJ,9,-2,Democratic,Incumbent re-elected.,Democratic,1,Nellie Pou (D); Rosie Pino (R); Terrisa Bukovinac (I),NJ-09,0.0,1.0,True,D,AP,0.0
+NJ,10,-27,Democratic,Incumbent re-elected.,Democratic,1,LaMonica McIver (D); Carmen Bucco (R),NJ-10,0.0,1.0,True,D,AP,0.0
+NJ,11,-5,Democratic,Incumbent re-elected.,Democratic,1,Analilia Mejia (D); Joe Hathaway (R); Alan Bond (I),NJ-11,0.0,1.0,True,D,AP,0.0
+NJ,12,-13,Democratic,"Incumbent retired.<ref name=""WatsonColeman""/><br>Democratic hold.",Democratic,1,Adam Hamawy (D); Gregg Mele (R); Winston Jordan (I),NJ-12,0.0,1.0,True,D,AP,0.0
+NM,1,-7,Democratic,Incumbent re-elected.,Democratic,1,Melanie Stansbury (D); Didi Okpareke (R),NM-01,0.0,1.0,True,D,AP,0.0
+NM,2,0,Democratic,Incumbent re-elected.,Democratic,1,Gabe Vasquez (D); Greg Cunningham (R),NM-02,0.0,1.0,True,D,AP,0.0
+NM,3,-3,Democratic,Incumbent re-elected.,Democratic,1,Teresa Leger Fernández (D); Martin Zamora (R),NM-03,0.0,1.0,True,D,AP,0.0
+NY,1,4,Republican,Incumbent re-elected.,Republican,1,Nick LaLota (R); Chris Gallant (D),NY-01,1.0,0.0,True,R,AP,1.0
+NY,2,6,Republican,Incumbent re-elected.,Republican,1,Andrew Garbarino (R); Patrick Halpin (D),NY-02,1.0,0.0,True,R,AP,1.0
+NY,3,0,Democratic,Incumbent re-elected.,Democratic,1,Tom Suozzi (D); Mike LiPetri (R),NY-03,0.0,1.0,True,D,AP,0.0
+NY,4,-2,Democratic,Incumbent re-elected.,Democratic,1,Laura Gillen (D); Jeanine Driscoll (R),NY-04,0.0,1.0,True,D,AP,0.0
+NY,5,-24,Democratic,Incumbent re-elected.,Democratic,1,Gregory Meeks (D); George Marsh (R),NY-05,0.0,1.0,True,D,AP,0.0
+NY,6,-6,Democratic,Incumbent re-elected.,Democratic,1,Grace Meng (D); Joseph Chou (R),NY-06,0.0,1.0,True,D,AP,0.0
+NY,7,-25,Democratic,Incumbent retired. Democratic hold.,Democratic,1,Claire Valdez (D); Melvin Rivera (R); Priscilla Ghaznavi (I),NY-07,0.0,1.0,True,D,AP,0.0
+NY,8,-24,Democratic,Incumbent re-elected.,Democratic,1,Hakeem Jeffries (D); Lewis Mizrahi (R),NY-08,0.0,1.0,True,D,AP,0.0
+NY,9,-22,Democratic,Incumbent re-elected.,Democratic,1,Yvette Clarke (D); Joel Azumah (R),NY-09,0.0,1.0,True,D,AP,0.0
+NY,10,-32,Democratic,Incumbent lost renomination.<br>Democratic hold.,Democratic,1,Brad Lander (D); Jennifer Moore (R),NY-10,0.0,1.0,True,D,AP,0.0
+NY,11,10,Republican,Incumbent re-elected.,Republican,1,Nicole Malliotakis (R); Michael DeCillis (D),NY-11,1.0,0.0,True,R,AP,1.0
+NY,12,-33,Democratic,Incumbent retired. Democratic hold.,Democratic,1,Micah Lasher (D); Caroline Shinkle (R); Karen Ortiz (I); Wilneida Negron (I),NY-12,0.0,1.0,True,D,AP,0.0
+NY,13,-32,Democratic,Incumbent lost renomination.<br>Democratic hold.,Democratic,1,Darializa Avila Chevalier (D); Jomo Williams (R),NY-13,0.0,1.0,True,D,AP,0.0
+NY,14,-19,Democratic,Incumbent re-elected.,Democratic,1,Alexandria Ocasio-Cortez (D); Diamant Hysenaj (R),NY-14,0.0,1.0,True,D,AP,0.0
+NY,15,-27,Democratic,Incumbent re-elected.,Democratic,1,Ritchie Torres (D); Stylo Sapaskis (R); Jose Vega (I),NY-15,0.0,1.0,True,D,AP,0.0
+NY,16,-18,Democratic,Incumbent re-elected.,Democratic,1,George Latimer (D); Joseph Cinquemani (R),NY-16,0.0,1.0,True,D,AP,0.0
+NY,17,-1,Republican,Incumbent lost re-election.<br />'''Democratic gain.''',Democratic,1,Cait Conley (D); Mike Lawler (R),NY-17,0.0,1.0,True,D,AP,0.0
+NY,18,-2,Democratic,Incumbent re-elected.,Democratic,1,Pat Ryan (D); Jacqueline Auringer (R),NY-18,0.0,1.0,True,D,AP,0.0
+NY,19,-1,Democratic,Incumbent re-elected.,Democratic,1,Josh Riley (D); Peter Oberacker (R),NY-19,0.0,1.0,True,D,AP,0.0
+NY,20,-8,Democratic,Incumbent re-elected.,Democratic,1,Paul Tonko (D); Ralph Ambrosio (R),NY-20,0.0,1.0,True,D,AP,0.0
+NY,21,10,Republican,Incumbent retired. Republican hold.,Republican,1,Anthony Constantino (R); Blake Gendebien (D),NY-21,1.0,0.0,True,R,AP,1.0
+NY,22,-4,Democratic,Incumbent re-elected.,Democratic,1,John Mannion (D); Kailee Buller (R),NY-22,0.0,1.0,True,D,AP,0.0
+NY,23,10,Republican,Incumbent re-elected.,Republican,1,Nick Langworthy (R); Aaron Gies (D),NY-23,1.0,0.0,True,R,AP,1.0
+NY,24,11,Republican,Incumbent re-elected.,Republican,1,Claudia Tenney (R); Alissa Ellman (D),NY-24,1.0,0.0,True,R,AP,1.0
+NY,25,-10,Democratic,Incumbent re-elected.,Democratic,1,Joseph Morelle (D); Virginia McIntyre (R),NY-25,0.0,1.0,True,D,AP,0.0
+NY,26,-11,Democratic,Incumbent re-elected.,Democratic,1,Tim Kennedy (D); Dennis Hannon (R),NY-26,0.0,1.0,True,D,AP,0.0
+NC,1,5,Democratic,Incumbent re-elected.,Democratic,1,Don Davis (D); Laurie Buckhout (R),NC-01,0.0,1.0,True,D,AP,0.0
+NC,2,-17,Democratic,Incumbent re-elected.,Democratic,1,Deborah Ross (D); Eugene Douglass (R),NC-02,0.0,1.0,True,D,AP,0.0
+NC,3,6,Republican,Incumbent renominated,,0,Greg Murphy (R); Raymond Smith Jr. (D),NC-03,0.005,0.9935,False,D,PM,0.00500751126690035
+NC,4,-23,Democratic,Incumbent re-elected.,Democratic,1,Valerie Foushee (D); Max Ganorkar (R),NC-04,0.0,1.0,True,D,AP,0.0
+NC,5,9,Republican,Incumbent renominated,,0,Chuck Hubbard (D); Virginia Foxx (R),NC-05,0.009,0.9905,False,D,PM,0.009004502251125562
+NC,6,9,Republican,Incumbent lost re-election.<br />'''Democratic gain.''',Democratic,1,Cyril Jefferson (D); Addison McDowell (R),NC-06,0.0,1.0,True,D,AP,0.0
+NC,7,7,Republican,Incumbent renominated.,,0,Kimberly Hardy (D); David Rouzer (R),NC-07,0.984,0.0175,False,R,PM,0.9825262106839739
+NC,8,10,Republican,Incumbent re-elected.,Republican,1,Mark Harris (R); Colby Watson (D),NC-08,1.0,0.0,True,R,AP,1.0
+NC,9,8,Republican,Incumbent lost re-election.<br />'''Democratic gain.''',Democratic,1,Richard Ojeda (D); Richard Hudson (R),NC-09,0.0,1.0,True,D,AP,0.0
+NC,10,9,Republican,Incumbent renominated,,0,Ashley Bell (D); Pat Harrigan (R),NC-10,0.99,0.0105,False,R,PM,0.9895052473763118
+NC,11,5,Republican,"Incumbent renominated<ref name="":7"" /> but withdrew.<ref name=""Edwards""/><ref name="":8"" /><br> '''Democratic gain.'''",Democratic,1,Jamie Ager (D); Jennifer Balkcom (R),NC-11,0.0,1.0,True,D,AP,0.0
+NC,12,-24,Democratic,Incumbent re-elected.,Democratic,1,Alma Adams (D); Jack Codiga (R),NC-12,0.0,1.0,True,D,AP,0.0
+NC,13,8,Republican,Incumbent lost re-election.<br />'''Democratic gain.''',Democratic,1,Paul Barringer (D); Brad Knott (R),NC-13,0.0,1.0,True,D,AP,0.0
+NC,14,8,Republican,Incumbent lost re-election.<br />'''Democratic gain.''',Democratic,1,LaKesha Womack (D); Tim Moore (R),NC-14,0.0,1.0,True,D,AP,0.0
+ND,AL,18,Republican,Incumbent re-elected.,Republican,1,Julie Fedorchak (R); Charles Tuttle (I); Helene Neville (I),ND-AL,1.0,0.0,True,R,AP,1.0
+OH,1,1,Democratic,Incumbent re-elected,Democratic,1,Greg Landsman (D); Eric Conroy (R),OH-01,0.0,1.0,True,D,AP,0.0
+OH,2,21,Republican,Incumbent re-elected,Republican,1,David Taylor (R); Jennifer Mazzuckelli (D),OH-02,1.0,0.0,True,R,AP,1.0
+OH,3,-21,Democratic,Incumbent re-elected.,Democratic,1,Joyce Beatty (D); Cleophus Dulaney (R),OH-03,0.0,1.0,True,D,AP,0.0
+OH,4,21,Republican,Incumbent re-elected,Republican,1,Jim Jordan (R); Joshua Kolasinski (D); Tracey Tackett (I),OH-04,1.0,0.0,True,R,AP,1.0
+OH,5,12,Republican,Incumbent re-elected,Republican,1,Bob Latta (R); Brian Shaver (D),OH-05,1.0,0.0,True,R,AP,1.0
+OH,6,17,Republican,Incumbent re-elected,Republican,1,Michael Rulli (R); Elizabeth Kirtley (D),OH-06,1.0,0.0,True,R,AP,1.0
+OH,7,5,Republican,Incumbent lost re-election.<br />'''Democratic gain.''',Democratic,1,Brian Poindexter (D); Max Miller (R),OH-07,0.0,1.0,True,D,AP,0.0
+OH,8,8,Republican,Incumbent re-elected,Republican,1,Warren Davidson (R); Vanessa Enoch (D),OH-08,1.0,0.0,True,R,AP,1.0
+OH,9,5,Democratic,Incumbent re-elected,Democratic,1,Marcy Kaptur (D); Derek Merrin (R),OH-09,0.0,1.0,True,D,AP,0.0
+OH,10,4,Republican,Incumbent lost re-election.<br />'''Democratic gain.''',Democratic,1,Kristina Knickerbocker (D); Mike Turner (R),OH-10,0.0,1.0,True,D,AP,0.0
+OH,11,-28,Democratic,Incumbent re-elected,Democratic,1,Shontel Brown (D); Mike Kirchner (R),OH-11,0.0,1.0,True,D,AP,0.0
+OH,12,15,Republican,Incumbent re-elected,Republican,1,Troy Balderson (R); Jerrad Christian (D),OH-12,1.0,0.0,True,R,AP,1.0
+OH,13,-2,Democratic,Incumbent re-elected,Democratic,1,Emilia Sykes (D); Carey Coleman (R); Sandeep Dixit (I),OH-13,0.0,1.0,True,D,AP,0.0
+OH,14,10,Republican,Incumbent re-elected,Republican,1,David Joyce (R); Maria Jukic (D),OH-14,1.0,0.0,True,R,AP,1.0
+OH,15,5,Republican,Incumbent lost re-election.<br />'''Democratic gain.''',Democratic,1,Don Leonard (D); Mike Carey (R),OH-15,0.0,1.0,True,D,AP,0.0
+OK,1,11,Republican,"Incumbent retired to [[2026 United States Senate election in Oklahoma|run for U.S. Senate]].<ref name=""HernOK""/><br>Republican hold.",Republican,1,Mark Tedford (R); John Croisant (D),OK-01,1.0,0.0,True,R,AP,1.0
+OK,2,28,Republican,Incumbent re-elected.,Republican,1,Josh Brecheen (R); Brandon Wade (D); Ronnie Hopkins (I),OK-02,1.0,0.0,True,R,AP,1.0
+OK,3,23,Republican,Incumbent re-elected.,,0,Suzie Byrd (D),OK-03,1.0,0.0,True,R,PM,1.0
+OK,4,17,Republican,Incumbent re-elected.,Republican,1,Tom Cole (R); Mitchell Jacob (D); Rocco Bonacci (I),OK-04,1.0,0.0,True,R,AP,1.0
+OK,5,9,Republican,Incumbent re-elected.,Republican,1,Stephanie Bice (R); Jena Nelson (D); Robert Henri (I); Austin Nieves (I),OK-05,1.0,0.0,True,R,AP,1.0
+OR,1,-20,Democratic,Incumbent re-elected.,Democratic,1,Suzanne Bonamici (D); Barbara Kahl (R),OR-01,0.0,1.0,True,D,AP,0.0
+OR,2,14,Republican,Incumbent re-elected.,Republican,1,Cliff Bentz (R); Chris Beck (D),OR-02,1.0,0.0,True,R,AP,1.0
+OR,3,-24,Democratic,Incumbent re-elected.,Democratic,1,Maxine Dexter (D); Loran Ayles (R),OR-03,0.0,1.0,True,D,AP,0.0
+OR,4,-6,Democratic,Incumbent re-elected.,Democratic,1,Val Hoyle (D); Monique DeSpain (R),OR-04,0.0,1.0,True,D,AP,0.0
+OR,5,-4,Democratic,Incumbent re-elected.,Democratic,1,Janelle Bynum (D); Patti Adair (R),OR-05,0.0,1.0,True,D,AP,0.0
+OR,6,-6,Democratic,Incumbent re-elected.,Democratic,1,Andrea Salinas (D); David Russ (R),OR-06,0.0,1.0,True,D,AP,0.0
+PA,1,-1,Republican,Incumbent lost re-election.<br />'''Democratic gain.''',Democratic,1,Bob Harvie (D); Brian Fitzpatrick (R),PA-01,0.0,1.0,True,D,AP,0.0
+PA,2,-19,Democratic,Incumbent re-elected.,Democratic,1,Brendan Boyle (D); Jessica Arriaga (R),PA-02,0.0,1.0,True,D,AP,0.0
+PA,3,-40,Democratic,Incumbent retired.<br/>Democratic hold.,Democratic,1,Chris Rabb (D); Dennis Mahoney (I),PA-03,0.0,1.0,True,D,AP,0.0
+PA,4,-8,Democratic,Incumbent re-elected.,Democratic,1,Madeleine Dean (D); Aurora Stuski (R),PA-04,0.0,1.0,True,D,AP,0.0
+PA,5,-15,Democratic,Incumbent re-elected.,Democratic,1,Mary Gay Scanlon (D); Nicholas Manganaro (R),PA-05,0.0,1.0,True,D,AP,0.0
+PA,6,-6,Democratic,Incumbent re-elected.,Democratic,1,Chrissy Houlahan (D); Marty Young (R),PA-06,0.0,1.0,True,D,AP,0.0
+PA,7,1,Republican,Incumbent lost re-election.<br />'''Democratic gain.''',Democratic,1,Bob Brooks (D); Ryan Mackenzie (R),PA-07,0.0,1.0,True,D,AP,0.0
+PA,8,4,Republican,Incumbent lost re-election.<br />'''Democratic gain.''',Democratic,1,Paige Cognetti (D); Rob Bresnahan (R),PA-08,0.0,1.0,True,D,AP,0.0
+PA,9,19,Republican,Incumbent re-elected.,Republican,1,Dan Meuser (R); Rachel Wallace (D),PA-09,1.0,0.0,True,R,AP,1.0
+PA,10,3,Republican,Incumbent lost re-election.<br />'''Democratic gain.''',Democratic,1,Janelle Stelson (D); Scott Perry (R),PA-10,0.0,1.0,True,D,AP,0.0
+PA,11,11,Republican,Incumbent re-elected.,Republican,1,Lloyd Smucker (R); Nancy Mannion (D),PA-11,1.0,0.0,True,R,AP,1.0
+PA,12,-10,Democratic,Incumbent re-elected.,Democratic,1,Summer Lee (D); James Hayes (R),PA-12,0.0,1.0,True,D,AP,0.0
+PA,13,23,Republican,Incumbent re-elected.,Republican,1,John Joyce (R); Beth Farnham (D),PA-13,1.0,0.0,True,R,AP,1.0
+PA,14,17,Republican,Incumbent re-elected.,Republican,1,Guy Reschenthaler (R); Alan Bradstock (D),PA-14,1.0,0.0,True,R,AP,1.0
+PA,15,19,Republican,Incumbent re-elected.,Republican,1,Glenn Thompson (R); Ray Bilger (D),PA-15,1.0,0.0,True,R,AP,1.0
+PA,16,11,Republican,Incumbent re-elected.,Republican,1,Mike Kelly (R); Justin Wagner (D),PA-16,1.0,0.0,True,R,AP,1.0
+PA,17,-3,Democratic,Incumbent re-elected.,Democratic,1,Chris Deluzio (D); Tony Guy (R),PA-17,0.0,1.0,True,D,AP,0.0
+RI,1,-12,Democratic,Incumbent re-elected.,Democratic,1,Gabe Amo (D); Kellie Keenan (R); Pedro DeSouza (I),RI-01,0.0,1.0,True,D,AP,0.0
+RI,2,-4,Democratic,Incumbent re-elected.,Democratic,1,Seth Magaziner (D); Vic Mellor (R),RI-02,0.0,1.0,True,D,AP,0.0
+SC,1,6,Republican,"Incumbent retired to [[2026 South Carolina gubernatorial election|run for governor]].<ref name=""MaceSC""/><br>'''Democratic gain.'''",Democratic,1,Nancy Lacore (D); Jenny Costa Honeycutt (R),SC-01,0.0,1.0,True,D,AP,0.0
+SC,2,7,Republican,Incumbent renominated.,,0,Joe Wilson (R); Zyon Khalifa (D),SC-02,0.9905,0.0095,False,R,PM,0.9905
+SC,3,21,Republican,Incumbent re-elected.,Republican,1,Sheri Biggs (R); Eunice Lehmacher (D),SC-03,1.0,0.0,True,R,AP,1.0
+SC,4,11,Republican,Incumbent re-elected.,Republican,1,William Timmons (R); Courtney McClain (D),SC-04,1.0,0.0,True,R,AP,1.0
+SC,5,11,Republican,"Incumbent retired to [[2026 South Carolina gubernatorial election|run for governor]].<ref name=""NormanSC""/><br>Republican hold.",Republican,1,Wes Climer (R); Mallory Dittmer (D),SC-05,1.0,0.0,True,R,AP,1.0
+SC,6,-13,Democratic,Incumbent re-elected.,Democratic,1,Jim Clyburn (D); John Peterson (R),SC-06,0.0,1.0,True,D,AP,0.0
+SC,7,12,Republican,Incumbent re-elected.,Republican,1,Russell Fry (R); John Vincent (D),SC-07,1.0,0.0,True,R,AP,1.0
+SD,AL,15,Republican,"Incumbent retired to [[2026 South Dakota gubernatorial election|run for governor]].<ref name=""DustySD""/><br>Republican hold.",Republican,1,Marty Jackley (R); Nikki Gronli (D),SD-AL,1.0,0.0,True,R,AP,1.0
+TN,1,29,Republican,Incumbent re-elected.,Republican,1,Diana Harshbarger (R); Kristi Burke (D); Joshua Ashburn (I); Billy Cody (I); Chris Campbell (I); Richard Baker (I); Tyler McClain (I),TN-01,1.0,0.0,True,R,AP,1.0
+TN,2,17,Republican,Incumbent re-elected.,Republican,1,Tim Burchett (R); Michaela Barnett (D); Bruce Fine (I); Adam Heimerman (I),TN-02,1.0,0.0,True,R,AP,1.0
+TN,3,18,Republican,Incumbent re-elected.,Republican,1,Chuck Fleischmann (R); Anna Golladay (D); Dean Arnold (I); Rodney Joe King (I); Jean Howard-Hill (I); Donnie Ownby (I); Edward Roland (I),TN-03,1.0,0.0,True,R,AP,1.0
+TN,4,11,Republican,Incumbent renominated.,,0,Victoria Broderick (D); Scott DesJarlais (R); Jacob Anders (I); Clay Faircloth (I),TN-04,0.023,0.9705,False,D,PM,0.02315047810770005
+TN,5,10,Republican,Incumbent lost renomination.<br>Republican hold.,Republican,1,Charlie Hatcher (R); Chaz Molder (D); James Johnson (I); Micheál O'Leary (I),TN-05,1.0,0.0,True,R,AP,1.0
+TN,6,13,Republican,"Incumbent retired to [[2026 Tennessee gubernatorial election|run for governor]].<ref name=""JohnRose""/><br>Republican hold.",Republican,1,Johnny Garrett (R); Mike Croley (D); Christopher Monday (I); Angus Purdy (I),TN-06,1.0,0.0,True,R,AP,1.0
+TN,7,11,Republican,Incumbent re-elected.,Republican,1,Matt Van Epps (R); Darden Copeland (D); Andrew Koontz (I); Lowell Reynolds (I),TN-07,1.0,0.0,True,R,AP,1.0
+TN,8,10,Republican,Incumbent re-elected.,Republican,1,David Kustoff (R); Heidi Kuhn (D); Pamela Moses (I); Horace Taylor (I); Adam Austill (I); Wells Blankenship (I); Antonio Futch (I); Henry Ward III (I),TN-08,1.0,0.0,True,R,AP,1.0
+TN,9,9,Democratic,"Incumbent retired.<ref name=""Cohen""/><br>'''Republican gain.'''",Republican,1,Brent Taylor (R); Justin Pearson (D); Dennis Clark (I); Michelle Head (I),TN-09,1.0,0.0,True,R,AP,1.0
+TX,1,24,Republican,Incumbent re-elected.,Republican,1,Nathaniel Moran (R); Yolanda Prince (D),TX-01,1.0,0.0,True,R,AP,1.0
+TX,2,11,Republican,"Incumbent lost renomination.<ref name=""Crenshaw""/><br>Republican hold.",Republican,1,Steve Toth (R); Shaun Finnie (D),TX-02,1.0,0.0,True,R,AP,1.0
+TX,3,11,Republican,Incumbent re-elected.,Republican,1,Keith Self (R); Evan Hunt (D),TX-03,1.0,0.0,True,R,AP,1.0
+TX,4,12,Republican,Incumbent re-elected.,Republican,1,Pat Fallon (R); Jason Pearce (D),TX-04,1.0,0.0,True,R,AP,1.0
+TX,5,10,Republican,Incumbent re-elected.,Republican,1,Lance Gooden (R); Chelsey Hockett (D),TX-05,1.0,0.0,True,R,AP,1.0
+TX,6,11,Republican,Incumbent re-elected.,Republican,1,Jake Ellzey (R); Danny Minton (D),TX-06,1.0,0.0,True,R,AP,1.0
+TX,7,-13,Democratic,Incumbent re-elected.,Democratic,1,Lizzie Fletcher (D); Alexander Hale (R),TX-07,0.0,1.0,True,D,AP,0.0
+TX,8,13,Republican,"Incumbent retired.<ref name=""Luttrell""/><br>Republican hold.",Republican,1,Jessica Steinmann (R); Laura Jones (D),TX-08,1.0,0.0,True,R,AP,1.0
+TX,9,9,,New member elected.<br>'''Democratic gain.''',Democratic,1,Leticia Gutierrez (D); Alex Mealer (R),TX-09,0.0,1.0,True,D,AP,0.0
+TX,10,10,Republican,"Incumbent retired.<ref name=""McCaul""/><br>Republican hold.",Republican,1,Chris Gober (R); Caitlin Rourk (D),TX-10,1.0,0.0,True,R,AP,1.0
+TX,11,17,Republican,Incumbent re-elected.,Republican,1,August Pfluger (R); Claire Reynolds (D),TX-11,1.0,0.0,True,R,AP,1.0
+TX,12,11,Republican,Incumbent re-elected.,Republican,1,Craig Goldman (R); Angela Rodriguez Prilliman (D),TX-12,1.0,0.0,True,R,AP,1.0
+TX,13,23,Republican,Incumbent re-elected.,Republican,1,Ronny Jackson (R); Mark Nair (D),TX-13,1.0,0.0,True,R,AP,1.0
+TX,14,12,Republican,Incumbent re-elected.,Republican,1,Randy Weber (R); Thurman Bartie (D),TX-14,1.0,0.0,True,R,AP,1.0
+TX,15,7,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,Bobby Pulido (D); Monica De La Cruz (R),TX-15,0.0,1.0,True,D,AP,0.0
+TX,16,-11,Democratic,Incumbent re-elected.,Democratic,1,Veronica Escobar (D); Adam Bauman (R),TX-16,0.0,1.0,True,D,AP,0.0
+TX,17,10,Republican,Incumbent re-elected.,Republican,1,Pete Sessions (R); Casey Shepard (D),TX-17,1.0,0.0,True,R,AP,1.0
+TX,18,-29,Democratic,Incumbent re-elected.,Democratic,1,Christian Menefee (D); Ronald Whitfield (R),TX-18,0.0,1.0,True,D,AP,0.0
+TX,19,25,Republican,"Incumbent retired.<ref name=""Arrington""/><br>Republican hold.",Republican,1,Tom Sell (R); Kyle Rable (D),TX-19,1.0,0.0,True,R,AP,1.0
+TX,20,-16,Democratic,Incumbent re-elected.,Democratic,1,Joaquin Castro (D); Edgardo Rafael Baez (R),TX-20,0.0,1.0,True,D,AP,0.0
+TX,21,10,Republican,"Incumbent retired to [[2026 Texas Attorney General election|run for Texas attorney general]].<ref name=""ChipRoy""/><br>Republican hold.",Republican,1,Mark Teixeira (R); Kristin Hook (D),TX-21,1.0,0.0,True,R,AP,1.0
+TX,22,11,Republican,"Incumbent retired.<ref name=""Nehls""/><br>Republican hold.",Republican,1,Trever Nehls (R); Marquette Greene-Scott (D),TX-22,1.0,0.0,True,R,AP,1.0
+TX,23,7,,,Democratic,1,Katy Padilla Stout (D); Brandon Herrera (R); Ben Mendoza (I),TX-23,0.0,1.0,True,D,AP,0.0
+TX,24,8,Republican,Incumbent re-elected.,Republican,1,Beth Van Duyne (R); Kevin Burge (D),TX-24,1.0,0.0,True,R,AP,1.0
+TX,25,11,Republican,Incumbent re-elected.,Republican,1,Roger Williams (R); Dione Sims (D),TX-25,1.0,0.0,True,R,AP,1.0
+TX,26,11,Republican,Incumbent re-elected.,Republican,1,Brandon Gill (R); Steven Shook (D),TX-26,1.0,0.0,True,R,AP,1.0
+TX,27,10,Republican,Incumbent re-elected.,Republican,1,Michael Cloud (R); Tanya Lloyd (D),TX-27,1.0,0.0,True,R,AP,1.0
+TX,28,3,Democratic,Incumbent re-elected.,Democratic,1,Henry Cuellar (D); Tano Tijerina (R),TX-28,0.0,1.0,True,D,AP,0.0
+TX,29,-17,Democratic,Incumbent re-elected.,Democratic,1,Sylvia Garcia (D); Martha Fierro (R),TX-29,0.0,1.0,True,D,AP,0.0
+TX,30,-25,,New member elected.<br>'''Democratic gain.''',Democratic,1,Frederick Haynes III (D); Everett Jackson (R),TX-30,0.0,1.0,True,D,AP,0.0
+TX,31,11,Republican,Incumbent re-elected.,Republican,1,John Carter (R); Justin Early (D),TX-31,1.0,0.0,True,R,AP,1.0
+TX,32,8,,New member elected.<br>'''Republican gain.''',Republican,1,Jace Yarbrough (R); Dan Barrios (D),TX-32,1.0,0.0,True,R,AP,1.0
+TX,33,-18,Democratic,"Incumbent retired to [[2026 United States Senate election in Texas|run for U.S. Senate]].<ref name=""CrockettTX""/><br />Democratic hold.",Democratic,1,Colin Allred (D); Patrick Gillespie (R),TX-33,0.0,1.0,True,D,AP,0.0
+TX,34,3,Democratic,Incumbent re-elected.,Democratic,1,Vicente Gonzalez (D); Eric Flores (R),TX-34,0.0,1.0,True,D,AP,0.0
+TX,35,4,,New member elected.<br>'''Democratic gain.''',Democratic,1,Johnny Garcia (D); Carlos De La Cruz (R),TX-35,0.0,1.0,True,D,AP,0.0
+TX,36,12,Republican,Incumbent re-elected.,Republican,1,Brian Babin (R); Rhonda Hart (D),TX-36,1.0,0.0,True,R,AP,1.0
+TX,37,-30,Democratic,"Incumbent retired.<ref name=""Doggett""/><br />Democratic loss.",Democratic,1,Greg Casar (D); Lauren Peña (R),TX-37,0.0,1.0,True,D,AP,0.0
+TX,38,10,Republican,"Incumbent retired to [[2026 United States Senate election in Texas|run for U.S. Senate]]<ref name=""WesleyHunt""/><br/>Republican hold.",Republican,1,Jon Bonck (R); Melissa McDonough (D),TX-38,1.0,0.0,True,R,AP,1.0
+UT,1,-12,,New member elected.<br>'''Democratic gain.''',Democratic,1,Ben McAdams (D); Riley Owen (R); Elias Montgomery (I),UT-01,0.0,1.0,True,D,AP,0.0
+UT,2,15,Republican,Incumbent re-elected.,Republican,1,Blake Moore (R); Peter Crosby (D); Robert Moesinger (I),UT-02,1.0,0.0,True,R,AP,1.0
+UT,3,21,Republican,Incumbent re-elected.,Republican,1,Celeste Maloy (R); Kent Udell (D); Ayden Scott (I); Adonis Hooslyn (I),UT-03,1.0,0.0,True,R,AP,1.0
+UT,4,17,Republican,"Incumbent retired.<ref name=""Burgess""/><br />Republican loss.",Republican,1,Mike Kennedy (R); Jonny Larsen (D); Steven Burt (I),UT-04,1.0,0.0,True,R,AP,1.0
+VT,AL,-17,Democratic,Incumbent re-elected.,Democratic,1,Becca Balint (D); Gerald Malloy (R); Suz Seymour (I); Ryan Walton (I); Phoenix Altair (I); Adam Ortiz (I),VT-AL,0.0,1.0,True,D,AP,0.0
+VA,1,3,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,Shannon Taylor (D); Rob Wittman (R),VA-01,0.0,1.0,True,D,AP,0.0
+VA,2,0,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,Elaine Luria (D); Jen Kiggans (R); J. Matt Baker (I); Geral Staten (I),VA-02,0.0,1.0,True,D,AP,0.0
+VA,3,-18,Democratic,Incumbent re-elected.,Democratic,1,Bobby Scott (D); Edwin Rivera (R); Makiba Gaines (I); Stephen Woll (I),VA-03,0.0,1.0,True,D,AP,0.0
+VA,4,-17,Democratic,Incumbent re-elected.,Democratic,1,Jennifer McClellan (D); Robert Murray (R); Joan Bell (I),VA-04,0.0,1.0,True,D,AP,0.0
+VA,5,6,Republican,Incumbent re-elected.,Republican,1,John McGuire (R); Tom Perriello (D); Cooke Harvey (I),VA-05,1.0,0.0,True,R,AP,1.0
+VA,6,12,Republican,Incumbent re-elected.,Republican,1,Ben Cline (R); Beth Macy (D),VA-06,1.0,0.0,True,R,AP,1.0
+VA,7,-2,Democratic,Incumbent re-elected.,Democratic,1,Eugene Vindman (D); Doug Ollivant (R); Alaha Ahrar (I); Randall Terry (I); Joshua Ertle (I),VA-07,0.0,1.0,True,D,AP,0.0
+VA,8,-26,Democratic,Incumbent re-elected.,Democratic,1,Don Beyer (D); Tony Sabio (R); Tim Sharman (I),VA-08,0.0,1.0,True,D,AP,0.0
+VA,9,22,Republican,Incumbent re-elected.,Republican,1,Morgan Griffith (R); Joy Powers (D),VA-09,1.0,0.0,True,R,AP,1.0
+VA,10,-6,Democratic,Incumbent re-elected.,Democratic,1,Suhas Subramanyam (D); Dave Beckwith (R); Ahsen Malik (I),VA-10,0.0,1.0,True,D,AP,0.0
+VA,11,-18,Democratic,Incumbent re-elected.,Democratic,1,James Walkinshaw (D); Arthur Purves (R),VA-11,0.0,1.0,True,D,AP,0.0
+WA,1,-15,Democratic,Incumbent re-elected.,Democratic,1,Suzan DelBene (D); Mary Silva (R),WA-01,0.0,1.0,True,D,AP,0.0
+WA,2,-12,Democratic,Incumbent re-elected.,Democratic,1,Rick Larsen (D); Edwin Feller (R),WA-02,0.0,1.0,True,D,AP,0.0
+WA,3,2,Democratic,Incumbent re-elected.,Democratic,1,Marie Gluesenkamp Perez (D); John Braun (R),WA-03,0.0,1.0,True,D,AP,0.0
+WA,4,10,Republican,"Incumbent retired.<ref name=""Newhouse""/><br>Republican hold.",Republican,1,Amanda McKinney (R); John Duresky (D),WA-04,1.0,0.0,True,R,AP,1.0
+WA,5,5,Republican,Incumbent re-elected.,Republican,1,Michael Baumgartner (R); Carmela Conroy (D),WA-05,1.0,0.0,True,R,AP,1.0
+WA,6,-10,Democratic,Incumbent re-elected.,Democratic,1,Emily Randall (D); Teresa Fox (R),WA-06,0.0,1.0,True,D,AP,0.0
+WA,7,-39,Democratic,Incumbent re-elected.,Democratic,1,Pramila Jayapal (D); Nirav Sheth (R),WA-07,0.0,1.0,True,D,AP,0.0
+WA,8,-3,Democratic,Incumbent re-elected.,Democratic,1,Kim Schrier (D); Spencer Meline (R),WA-08,0.0,1.0,True,D,AP,0.0
+WA,9,-22,Democratic,Incumbent re-elected.,Democratic,1,Adam Smith (D); Doug Basler (R),WA-09,0.0,1.0,True,D,AP,0.0
+WA,10,-9,Democratic,Incumbent re-elected.,Democratic,1,Marilyn Strickland (D); Chris Chung (R),WA-10,0.0,1.0,True,D,AP,0.0
+WV,1,22,Republican,Incumbent re-elected.,Republican,1,Carol Miller (R); Vince George (D),WV-01,1.0,0.0,True,R,AP,1.0
+WV,2,20,Republican,Incumbent re-elected.,Republican,1,Riley Moore (R); Ace Parsi (D),WV-02,1.0,0.0,True,R,AP,1.0
+WI,1,2,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,Mitchell Berman (D); Bryan Steil (R),WI-01,0.0,1.0,True,D,AP,0.0
+WI,2,-21,Democratic,Incumbent re-elected.,Democratic,1,Mark Pocan (D),WI-02,0.0,1.0,True,D,AP,0.0
+WI,3,3,Republican,Incumbent lost re-election.<br>'''Democratic gain.''',Democratic,1,Rebecca Cooke (D); Derrick Van Orden (R); Alexander Kent (I); Rustin Provance (I),WI-03,0.0,1.0,True,D,AP,0.0
+WI,4,-26,Democratic,Incumbent re-elected.,Democratic,1,Gwen Moore (D); Tim Rogers (R); Arthur Burks (I),WI-04,0.0,1.0,True,D,AP,0.0
+WI,5,11,Republican,Incumbent re-elected.,Republican,1,Scott Fitzgerald (R); Andrew Beck (D),WI-05,1.0,0.0,True,R,AP,1.0
+WI,6,8,Republican,Incumbent re-elected.,Republican,1,Glenn Grothman (R); Brad Smith (D); Elizabeth Fitzgibbon (I); Michael Thurow (I),WI-06,1.0,0.0,True,R,AP,1.0
+WI,7,11,Republican,"Incumbent retired to run for [[2026 Wisconsin gubernatorial election|governor]].<ref name=""TomTiffany""/><br>Republican hold.",Republican,1,Michael Alfonso (R); Fred Clark (D),WI-07,1.0,0.0,True,R,AP,1.0
+WI,8,8,Republican,Incumbent re-elected.,Republican,1,Tony Wied (R); Rick Crosson (D),WI-08,1.0,0.0,True,R,AP,1.0
+WY,AL,23,Republican,"Incumbent retired to [[2026 United States Senate election in Wyoming|run for U.S. Senate]].<ref name=""Hageman""/><br>Republican hold.",Republican,1,Chuck Gray (R); Lisa Kinney (D),WY-AL,1.0,0.0,True,R,AP,1.0
