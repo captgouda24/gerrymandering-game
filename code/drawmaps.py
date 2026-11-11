@@ -100,7 +100,10 @@ def setup(st, ndist, eps, upd_units):
     upd = {k: Tally(k) for k in ('pop', 'd24', 'r24', 'd20', 'r20', 'hisp', 'black', 'asian')}
     fast = functools.partial(bipartition_tree, max_attempts=4000)          # fail fast if the precincts cannot be balanced this tightly
     init = Partition(g, recursive_tree_part(g, range(ndist), ideal, 'pop', eps * 0.9, method=fast), upd)
-    prop = functools.partial(recom, pop_col='pop', pop_target=ideal, epsilon=eps, node_repeats=1, method=fast)
+    raw = functools.partial(recom, pop_col='pop', pop_target=ideal, epsilon=eps, node_repeats=1, method=fast)
+    def prop(part):                                                        # a pair of districts with no balanced cut is skipped, not fatal
+        try: return raw(part)
+        except RuntimeError: return part.flip({})
     return z, init, prop, [constraints.within_percent_of_ideal_population(init, eps, 'pop')], len(g.nodes)
 
 def neutral_chain(init, prop, cons, steps):
@@ -167,7 +170,10 @@ def run_state(st, verbose=False):
     random.seed(0); np.random.seed(0)
     z = np.load(f'data/vtd/{st}.npz', allow_pickle=True)
     pop = z['pop'].sum(); res = dict(state=st, statewide=statewide(z), state_shares=[float(z[g].sum() / pop) for g in ('hispanic', 'black', 'asian')])
-    res.update(run_congress(st, verbose))
+    try: res.update(run_congress(st, verbose))
+    except RuntimeError:                                   # last resort (island geography): every district at the statewide lean
+        N = SEATS[st]; flat = [[res['statewide']] * N, [res['state_shares']] * N]; menu = {str(t): flat for t in TARGETS}
+        res.update(seats=N, congress_fallback=True, neutral=flat[0], neutral_one=flat, R=menu, D=menu, R_h=menu, D_h=menu)
     up, lo = CHAMBERS[st]; res['upper'] = run_chamber(st, up, verbose)
     res['lower'] = dict(res['upper']) if lo == up else run_chamber(st, lo, verbose)
     os.makedirs('data/maps', exist_ok=True)

@@ -1,0 +1,95 @@
+NH 0
+TX 0
+GA 0
+FL 0
+IL 0
+MA 0
+PA 0
+CA 0
+MN 0
+NC 0
+MO 0
+CT 0
+SC 0
+MI 0
+OH 0
+ME 0
+MS 0
+VT 0
+IN 0
+VA 0
+KS 0
+OK 0
+AL 0
+LA 0
+IA 0
+TN 0
+WI 0
+KY 0
+MT 0
+AR 0
+WA 0
+CO 0
+WV 0
+NJ 0
+MD 0
+NM 0
+RI 0
+UT 0
+OR 0
+ND 0
+WY 0
+AZ 0
+NV 0
+ID 0
+SD 0
+NE 0
+DE 0
+AK 0
+/tmp/claude-0/-home-user/277cb819-c4bb-5a44-8ea9-25ae4328e462/scratchpad/code/drawmaps.py:102: DeprecationWarning: gerrychain.tree.recursive_tree_part is deprecated; use gerrychain.partition.recursive_tree_part instead. The legacy import will be removed in GerryChain 2.0.
+  init = Partition(g, recursive_tree_part(g, range(ndist), ideal, 'pop', eps * 0.9, method=fast), upd)
+/usr/local/lib/python3.13/site-packages/gerrychain/_deprecated.py:362: DeprecationWarning: recursive_tree_part(..., method=...) is deprecated; use bipartition_tree_fn=... instead. The legacy name will be removed in GerryChain 2.0.
+  return fn(*args, **kwargs)
+/tmp/claude-0/-home-user/277cb819-c4bb-5a44-8ea9-25ae4328e462/scratchpad/code/drawmaps.py:111: DeprecationWarning: Proposal function 'prop' uses the pre-1.0 callback signature (without the keyword-only 'rng' parameter). Update it for the 1.0 callback protocol; legacy callbacks will stop working in GerryChain 2.0.
+  for i, p in enumerate(MarkovChain(prop, cons, accept.always_accept, init, steps)):
+/tmp/claude-0/-home-user/277cb819-c4bb-5a44-8ea9-25ae4328e462/scratchpad/code/drawmaps.py:105: DeprecationWarning: recom(..., method=...) is deprecated; use bipartition_tree_fn=... instead. The legacy name will be removed in GerryChain 2.0.
+  try: return raw(part)
+/usr/local/lib/python3.13/site-packages/gerrychain/tree/bipartition_tree.py:1246: UserWarning: node_repeats is not beneficial with `find_balanced_edge_cuts_memoization`, which exhaustively searches each spanning tree. Set node_repeats=0 to redraw the tree after an unsuccessful search. Positive values are useful only with `find_balanced_edge_cuts_contraction` or a custom cut-edge finder.
+  num_cuts, node_ids = _internal_bipartition_tree(
+/usr/local/lib/python3.13/site-packages/gerrychain/tree/bipartition_tree.py:1394: BipartitionWarning: 
+Failed to find a balanced cut after 1000 attempts.
+This can happen if there are relatively few ways to split a graph
+into 2 pieces with appropriate population balance (+/- epsilon)
+for example, if there is a choke-point in the middle of the 
+merged districts.
+
+If possible, consider enabling pair reselection within your
+MarkovChain proposal method to allow the algorithm to select
+a different pair of districts for recombination.
+  warnings.warn(
+/tmp/claude-0/-home-user/277cb819-c4bb-5a44-8ea9-25ae4328e462/scratchpad/code/drawmaps.py:102: DeprecationWarning: gerrychain.tree.recursive_tree_part is deprecated; use gerrychain.partition.recursive_tree_part instead. The legacy import will be removed in GerryChain 2.0.
+  init = Partition(g, recursive_tree_part(g, range(ndist), ideal, 'pop', eps * 0.9, method=fast), upd)
+/usr/local/lib/python3.13/site-packages/gerrychain/_deprecated.py:362: DeprecationWarning: recursive_tree_part(..., method=...) is deprecated; use bipartition_tree_fn=... instead. The legacy name will be removed in GerryChain 2.0.
+  return fn(*args, **kwargs)
+/tmp/claude-0/-home-user/277cb819-c4bb-5a44-8ea9-25ae4328e462/scratchpad/code/drawmaps.py:111: DeprecationWarning: Proposal function 'prop' uses the pre-1.0 callback signature (without the keyword-only 'rng' parameter). Update it for the 1.0 callback protocol; legacy callbacks will stop working in GerryChain 2.0.
+  for i, p in enumerate(MarkovChain(prop, cons, accept.always_accept, init, steps)):
+/tmp/claude-0/-home-user/277cb819-c4bb-5a44-8ea9-25ae4328e462/scratchpad/code/drawmaps.py:105: DeprecationWarning: recom(..., method=...) is deprecated; use bipartition_tree_fn=... instead. The legacy name will be removed in GerryChain 2.0.
+  try: return raw(part)
+/usr/local/lib/python3.13/site-packages/gerrychain/tree/bipartition_tree.py:1246: UserWarning: node_repeats is not beneficial with `find_balanced_edge_cuts_memoization`, which exhaustively searches each spanning tree. Set node_repeats=0 to redraw the tree after an unsuccessful search. Positive values are useful only with `find_balanced_edge_cuts_contraction` or a custom cut-edge finder.
+  num_cuts, node_ids = _internal_bipartition_tree(
+/usr/local/lib/python3.13/site-packages/gerrychain/optimization/optimization.py:426: DeprecationWarning: Proposal function 'prop' uses the pre-1.0 callback signature (without the keyword-only 'rng' parameter). Update it for the 1.0 callback protocol; legacy callbacks will stop working in GerryChain 2.0.
+  for part in chain:
+/usr/local/lib/python3.13/site-packages/gerrychain/tree/bipartition_tree.py:1394: BipartitionWarning: 
+Failed to find a balanced cut after 1000 attempts.
+This can happen if there are relatively few ways to split a graph
+into 2 pieces with appropriate population balance (+/- epsilon)
+for example, if there is a choke-point in the middle of the 
+merged districts.
+
+If possible, consider enabling pair reselection within your
+MarkovChain proposal method to allow the algorithm to select
+a different pair of districts for recombination.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/gerrychain/optimization/optimization.py:426: DeprecationWarning: Proposal function 'prop' uses the pre-1.0 callback signature (without the keyword-only 'rng' parameter). Update it for the 1.0 callback protocol; legacy callbacks will stop working in GerryChain 2.0.
+  for part in chain:
+NY 1029
