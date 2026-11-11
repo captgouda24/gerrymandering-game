@@ -8,9 +8,9 @@ sys.path.insert(0, 'code')
 from drawmaps import CHAMBERS, NAT, statewide
 CAP = dict(NH=8.0, VT=2.0, ME=1.3, CT=1.3)             # largest district, in seats (single precincts above the cap stand alone)
 
-def chamber(st, seed=0, proposals=600_000, rounds=8, verbose=True):
-    rng = np.random.default_rng(seed); z = np.load(f'data/vtd/{st}.npz', allow_pickle=True); n = len(z['pop']); nseats = CHAMBERS[st][1]
-    pop = z['pop'].astype(float); ideal = pop.sum() / nseats; cap = CAP[st] * ideal; sw = statewide(z)
+def chamber(st, nseats=None, cap_seats=None, seed=0, proposals=600_000, rounds=8, verbose=True):
+    rng = np.random.default_rng(seed); z = np.load(f'data/vtd/{st}.npz', allow_pickle=True); n = len(z['pop']); nseats = nseats or CHAMBERS[st][1]
+    pop = z['pop'].astype(float); ideal = pop.sum() / nseats; cap = (cap_seats or CAP[st]) * ideal; sw = statewide(z)
     V = np.stack([z['24_pres_r'], z['24_pres_d'], z['20_pres_r'], z['20_pres_d'], pop, z['hispanic'], z['black'], z['asian']], 1).astype(float)
     nbr = [[] for _ in range(n)]
     for a, b in z['edges']: nbr[a].append(int(b)); nbr[b].append(int(a))
@@ -29,7 +29,7 @@ def chamber(st, seed=0, proposals=600_000, rounds=8, verbose=True):
             for w_ in nbr[u]:
                 if w_ in rest and w_ not in seen: seen.add(w_); stack.append(w_)
         return len(seen) == len(rest)
-    out = dict(districts_true=nseats, method='multi-member districts built from raw precincts', precincts=n)
+    out = dict(districts_true=nseats, method='population-weighted districts built from whole precincts', precincts=n)
     sums0 = V.copy(); t0, k0 = tip(sums0, np.ones(n, bool), 1)
     out['neutral_tip'] = t0 - sw; out['neutral_tip_shares'] = (sums0[k0, 5:8] / max(sums0[k0, 4], 1)).round(3).tolist()
     for name, sign in (('R', 1), ('D', -1)):
@@ -63,15 +63,19 @@ def chamber(st, seed=0, proposals=600_000, rounds=8, verbose=True):
         out[name + '_districts'] = int(alive.sum())
     out['districts_drawn'] = out['R_districts']; return out
 
+def best_of(st, nseats=None, cap_seats=None, seeds=3, proposals=300_000, rounds=6):
+    """Several independent searches; keep each party's best."""
+    runs = [chamber(st, nseats, cap_seats, seed=sd, proposals=proposals, rounds=rounds, verbose=False) for sd in range(seeds)]
+    res = dict(runs[0]); br = max(runs, key=lambda r: r['R_tip']); bd = min(runs, key=lambda r: r['D_tip'])
+    for k in ('R_tip', 'R_tip_shares', 'R_districts'): res[k] = br[k]
+    for k in ('D_tip', 'D_tip_shares', 'D_districts'): res[k] = bd[k]
+    return res
+
 if __name__ == '__main__':
     for st in sys.argv[1:]:
-        runs = [chamber(st, seed=sd, verbose=False) for sd in range(4)]        # four independent searches; keep each party's best
-        res = dict(runs[0]); br = max(runs, key=lambda r: r['R_tip']); bd = min(runs, key=lambda r: r['D_tip'])
-        for k in ('R_tip', 'R_tip_shares', 'R_districts'): res[k] = br[k]
-        for k in ('D_tip', 'D_tip_shares', 'D_districts'): res[k] = bd[k]
-        print(st, {k: (round(v, 2) if isinstance(v, float) else v) for k, v in res.items()}, flush=True)
+        res = best_of(st, seeds=4, proposals=600_000, rounds=8); print(st, {k: (round(v, 2) if isinstance(v, float) else v) for k, v in res.items()}, flush=True)
         try:
-            with open(f'data/maps/{st}.json') as f: m = json.load(f)
-            m['lower'] = res
-            with open(f'data/maps/{st}.json', 'w') as f: json.dump(m, f)
+            with open(f'data/maps/{st}.json') as f: mp = json.load(f)
+            mp['lower'] = res
+            with open(f'data/maps/{st}.json', 'w') as f: json.dump(mp, f)
         except FileNotFoundError: print(st, 'state file not ready; result not saved')

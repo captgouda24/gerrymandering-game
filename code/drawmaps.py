@@ -9,7 +9,7 @@ import sys, json, time, os, random, functools, numpy as np, networkx as nx
 from gerrychain import Graph, Partition, MarkovChain, constraints, accept
 from gerrychain.updaters import Tally
 from gerrychain.proposals import recom
-from gerrychain.tree import recursive_tree_part
+from gerrychain.tree import recursive_tree_part, bipartition_tree
 from gerrychain.optimization import SingleMetricOptimizer
 
 NAT = {'24': 1.5, '20': -4.5}          # national two-party presidential margin, R minus D
@@ -98,8 +98,9 @@ def tipping_score(sign):                # legislative: the tipping seat, with a 
 def setup(st, ndist, eps, upd_units):
     g, z, nprec = load_graph(st, ndist, upd_units); ideal = z['pop'].sum() / ndist
     upd = {k: Tally(k) for k in ('pop', 'd24', 'r24', 'd20', 'r20', 'hisp', 'black', 'asian')}
-    init = Partition(g, recursive_tree_part(g, range(ndist), ideal, 'pop', eps * 0.9), upd)
-    prop = functools.partial(recom, pop_col='pop', pop_target=ideal, epsilon=eps, node_repeats=1)
+    fast = functools.partial(bipartition_tree, max_attempts=4000)          # fail fast if the precincts cannot be balanced this tightly
+    init = Partition(g, recursive_tree_part(g, range(ndist), ideal, 'pop', eps * 0.9, method=fast), upd)
+    prop = functools.partial(recom, pop_col='pop', pop_target=ideal, epsilon=eps, node_repeats=1, method=fast)
     return z, init, prop, [constraints.within_percent_of_ideal_population(init, eps, 'pop')], len(g.nodes)
 
 def neutral_chain(init, prop, cons, steps):
@@ -118,9 +119,11 @@ def run_congress(st, verbose=False):
     N = SEATS[st]; t0 = time.time()
     if N == 1:
         z = np.load(f'data/vtd/{st}.npz', allow_pickle=True); return dict(seats=1, neutral=[statewide(z)], R={}, D={}, R_h={}, D_h={})
-    z, init, prop, cons, nn = setup(st, N, 0.01, 150)
+    for eps in (0.01, 0.02, 0.05):                        # widen the population tolerance only if 1% cannot be met from precincts
+        try: z, init, prop, cons, nn = setup(st, N, eps, 150); break
+        except RuntimeError: pass
     samp, last = neutral_chain(init, prop, cons, 300)
-    res = dict(seats=N, nodes=nn, neutral=np.mean(samp, axis=0).round(2).tolist(), R={}, D={}, R_h={}, D_h={})
+    res = dict(seats=N, nodes=nn, pop_tolerance=eps, neutral=np.mean(samp, axis=0).round(2).tolist(), R={}, D={}, R_h={}, D_h={})
     res['neutral_one'] = sorted_map(last)                 # one representative neutral map with its demographics
     for name, sign in (('R', 1), ('D', -1)):
         start = last
@@ -133,21 +136,24 @@ def run_congress(st, verbose=False):
     res['seconds'] = round(time.time() - t0); return res
 
 def run_chamber(st, ndist_true, verbose=False):
-    """If no balanced cut is found, retry with finer building blocks; only as a last resort draw 30% fewer districts."""
-    nprec = len(np.load(f'data/vtd/{st}.npz', allow_pickle=True)['pop']); N = int(min(ndist_true, nprec // MIN_UNITS))
-    while True:
-        for units in (40, 80, 160):
-            try: return _run_chamber(st, ndist_true, N, units, verbose)
-            except RuntimeError: pass
-        N = int(N * 0.7)
+    """Draw a chamber with single-member districts within 5% (then 10%) of equal population. If the precincts are too
+    coarse for that, build it from whole precincts as population-weighted districts (see multimember.py)."""
+    nprec = len(np.load(f'data/vtd/{st}.npz', allow_pickle=True)['pop'])
+    if nprec >= MIN_UNITS * ndist_true:
+        for eps in (0.05, 0.10):
+            for units in (40, 120):
+                try: return _run_chamber(st, ndist_true, ndist_true, units, verbose, eps)
+                except RuntimeError: pass
+    import multimember
+    return multimember.best_of(st, ndist_true, multimember.CAP.get(st, 1.3))
 
-def _run_chamber(st, ndist_true, N, units=40, verbose=False):
+def _run_chamber(st, ndist_true, N, units=40, verbose=False, eps=0.05):
     t0 = time.time()
-    z, init, prop, cons, nn = setup(st, N, 0.05, units); sw = statewide(z)
+    z, init, prop, cons, nn = setup(st, N, eps, units); sw = statewide(z)
     samp, last = neutral_chain(init, prop, cons, int(min(600, max(200, 4 * N))))
     def tipsh(p, sign):
         l = sign * leans(p); return shares(p)[np.argsort(-l)[len(l) // 2]].round(3).tolist()
-    res = dict(districts_true=ndist_true, districts_drawn=N, nodes=nn, neutral_tip_shares=tipsh(last, 1),
+    res = dict(districts_true=ndist_true, districts_drawn=N, nodes=nn, pop_tolerance=eps, neutral_tip_shares=tipsh(last, 1),
                neutral_tip=float(np.mean([tipping(s, 1) for s in samp]) - sw))       # tipping-seat R lean minus statewide R lean
     for name, sign in (('R', 1), ('D', -1)):
         best = optimize(prop, cons, last, tipping_score(sign), bursts=int(min(800, max(150, 6 * N))))
