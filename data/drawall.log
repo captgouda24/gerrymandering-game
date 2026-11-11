@@ -65,3 +65,45 @@ NY ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
 FL ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
 GA ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
 CA ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+IL ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+MN 286
+MA ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+MO ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+NC 289
+ME ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+CT ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+MI ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+SC ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+VT ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+IN 278
+VA 290
+OH ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+MS ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+OK 227
+KS ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+AL ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+TN 200
+LA ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+IA ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+WI 272
+KY 229
+MT ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+AR 232
+WV 172
+WA 246
+CO 222
+MD 189
+NJ 268
+NM 203
+RI ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+ND ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+UT ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+NE 190
+OR ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+WY ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+AZ 176
+SD 7
+DE 10
+ID 220
+AK ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
+NV ERR RuntimeError('Could not find a possible cut after 100000 attempts.')
