@@ -26,7 +26,7 @@ CHAMBERS = dict(AL=(35, 105), AK=(20, 40), AZ=(30, 30), AR=(35, 100), CA=(40, 80
 TARGETS = (4, 8, 12, 16)                # congressional design margins on the seats-vs-safety frontier
 MIN_UNITS = 6                           # a chamber is drawn with at most (precincts / 6) districts (binds for NH, VT, ME, ... lower houses)
 
-def load_graph(st, ndist, units_per_district):
+def load_graph(st, ndist, units_per_district, return_label=False):
     """Precinct adjacency graph, with precincts merged into contiguous within-county blocks of about
     1/units_per_district of a district (breadth-first growth up to a population cap). Rough but fast."""
     z = np.load(f'data/vtd/{st}.npz', allow_pickle=True)
@@ -51,6 +51,7 @@ def load_graph(st, ndist, units_per_district):
     le = label[np.array(g.edges)]; h.add_edges_from({(int(a), int(b)) for a, b in le if a != b})
     agg = {c: np.bincount(label, weights=v, minlength=k) for c, v in cols.items()}
     for i in range(k): h.nodes[i].update({c: float(agg[c][i]) for c in agg})
+    if return_label: return Graph.from_networkx(h), z, n, label
     return Graph.from_networkx(h), z, n
 
 def leans(part):

@@ -52,40 +52,42 @@ def stress(inp):
                 rows.append(r)
     return rows
 
-if __name__ == '__main__':
-    inp = load_inputs(); assert not inp['missing'], inp['missing']
-    R = dict(theta=inp['theta'], stress=stress(inp))
-    Pu, pay = uncoordinated(inp)
+
+def study(inp, simkw, full=True):
+    """Solve one world.  simkw are fixed simulation options for that world (e.g. clean_start, even_start)."""
+    def simw(P, ban, **kw): return sim(inp, P, ban, **dict(simkw, **kw))
+    def coord(ban, P0, who, **kw): return coordinated(inp, ban, P0, who, **dict(simkw, **kw))
+    R = dict(n_enacted_floor=inp['n_enacted_floor'], n_alt=inp['n_alt'])
+    Pu, pay = uncoordinated(inp, **simkw)
     R['uncoordinated_policy'] = {s: dict(R=[Pu[0][0, i], Pu[1][0, i], int(Pu[2][0, i])], D=[Pu[0][1, i], Pu[1][1, i], int(Pu[2][1, i])]) for i, s in enumerate(ST) if NS[i] > 1}
-    print('uncoordinated seat-weighted mean design margin: R %.1f  D %.1f; hedged share R %.2f D %.2f' % tuple(
-        [(Pu[0][p] * NS).sum() / NS.sum() for p in (0, 1)] + [(Pu[2][p] * NS).sum() / NS.sum() for p in (0, 1)]), flush=True)
+    R['mean_design_margin'] = dict(R=float((Pu[0][0] * NS).sum() / NS.sum()), D=float((Pu[0][1] * NS).sum() / NS.sum()),
+                                   R_hedged=float((Pu[2][0] * NS).sum() / NS.sum()), D_hedged=float((Pu[2][1] * NS).sum() / NS.sum()))
     scen = {}; eq = {}
-    for name, kind, kw in (('status_quo', 'status_quo', {}), ('unlimited', 'none', {}), ('national_ban', 'national_ban', {}),
-                           ('status_quo_decennial', 'status_quo', dict(mid_decade=False)), ('status_quo_no_group_shocks', 'status_quo', dict(group_scale=0.0))):
-        ban = ban_matrix(kind); e = {}
-        o = sim(inp, Pu, ban, seed=1, **kw); e['uncoordinated'] = summ(o); e['R_maj_by_year'] = o['R_maj_by_year'].round(3).tolist()
-        if kind != 'national_ban':
-            for label, who in (('both_coordinated', (0, 1)), ('only_R_coordinated', (0,)), ('only_D_coordinated', (1,))):
-                P, pol = coordinated(inp, ban, Pu, who, **kw); e[label] = summ(sim(inp, P, ban, seed=1, **kw)); e[label]['policy'] = pol
-                if label == 'both_coordinated': eq[name] = P
-        scen[name] = e; print(name, json.dumps(e)[:1000], f'[{time.time()-t00:.0f}s]', flush=True)
-    # lopsided worlds: one party goes all-out wherever it holds the pen (no bans bind it), the other draws neutral maps
-    for name, ab, who in (('R_all_out_D_abstains', -1, 0), ('D_all_out_R_abstains', 1, 1)):
+    def row(o): return dict(D_time=round(o['D_time'], 4), R_time=round(o['R_time'], 4), se=round(o['D_time_se'], 4), R_seats=round(o['R_seats'], 1), sd=round(o['sd_seats'], 1), flips=round(o['flips'], 2))
+    scen['national_ban'] = dict(uncoordinated=row(simw(Pu, ban_matrix('national_ban'), seed=1)))
+    for name, kind, kw in (('current_bans', 'status_quo', {}), ('no_bans', 'none', {})) + ((('current_bans_decennial_only', 'status_quo', dict(mid_decade=False)),
+                           ('current_bans_no_group_shocks', 'status_quo', dict(group_scale=0.0))) if full else ()):
+        ban = ban_matrix(kind); o = simw(Pu, ban, seed=1, **kw); e = dict(uncoordinated=row(o), R_maj_by_year=o['R_maj_by_year'].round(3).tolist())
+        for label, who in (('both_coordinated', (0, 1)), ('only_R_coordinated', (0,)), ('only_D_coordinated', (1,))):
+            if not full and label != 'both_coordinated': continue
+            P, pol = coord(ban, Pu, who, **kw); e[label] = row(simw(P, ban, seed=1, **kw)); e[label]['policy'] = pol
+            if label == 'both_coordinated': eq[name] = P
+        scen[name] = e; print(' ', name, json.dumps(e)[:700], f'[{time.time()-t00:.0f}s]', flush=True)
+    for name, ab, who in (('R_all_out_D_abstains', -1, 0), ('D_all_out_R_abstains', 1, 1)):      # one party tries, the other draws neutral maps
         for law in ('none', 'status_quo'):
-            ban = ban_matrix(law); e = dict(uncoordinated=summ(sim(inp, Pu, ban, seed=1, abstain=ab)))
-            P, pol = coordinated(inp, ban, Pu, (who,), abstain=ab); e['trying_party_coordinated'] = summ(sim(inp, P, ban, seed=1, abstain=ab)); e['policy'] = pol
-            scen[name + ('' if law == 'none' else '_under_current_bans')] = e; print(name, law, json.dumps(e), f'[{time.time()-t00:.0f}s]', flush=True)
+            ban = ban_matrix(law); e = dict(uncoordinated=row(simw(Pu, ban, seed=1, abstain=ab)))
+            P, pol = coord(ban, Pu, (who,), abstain=ab); e['trying_party_coordinated'] = row(simw(P, ban, seed=1, abstain=ab)); e['policy'] = pol
+            scen[name + ('_no_bans' if law == 'none' else '_current_bans')] = e; print(' ', name, law, json.dumps(e), f'[{time.time()-t00:.0f}s]', flush=True)
     R['scenarios'] = scen
-    # single-state reforms relative to the status quo (uncoordinated play): add a ban where there is none, lift it where there is one
-    b0 = ban_matrix('status_quo'); base = sim(inp, Pu, b0, K=8000); rows = []
-    for i, s in enumerate(ST):
+    if not full: return R
+    R['stress'] = stress(inp); b0 = ban_matrix('status_quo'); base = simw(Pu, b0, K=8000); rows = []
+    for i, s in enumerate(ST):                      # single-state reforms: add a ban where there is none, lift it where there is one
         if NS[i] == 1: continue
         banned = b0[:, i].all()
-        o = sim(inp, Pu, ban_matrix('status_quo', lift=[s]) if banned else ban_matrix('status_quo', extra=[s]), K=8000)
+        o = simw(Pu, ban_matrix('status_quo', lift=[s]) if banned else ban_matrix('status_quo', extra=[s]), K=8000)
         rows.append(dict(state=s, seats=int(NS[i]), change='lift ban' if banned else 'add ban', dD_time=round(o['D_time'] - base['D_time'], 4), dR_seats=round(o['R_seats'] - base['R_seats'], 2)))
-    R['state_reforms'] = rows; print('state reforms done', f'[{time.time()-t00:.0f}s]', flush=True)
-    # value of seats beyond the threshold: majority in the next three Congresses as a function of today's seat count
-    o = sim(inp, Pu, b0, K=8000, detail=True); rs = o['rseats']; val = []
+    R['state_reforms'] = rows
+    o = simw(Pu, b0, K=8000, detail=True); rs = o['rseats']; val = []      # value of seats beyond the threshold
     fut = np.stack([(rs[:, t+1:t+4] >= 218).mean(1) for t in range(T - 3)], 1); now = rs[:, :T-3]
     for lo in range(170, 266, 8):
         m = (now >= lo) & (now < lo + 8)
@@ -93,26 +95,34 @@ if __name__ == '__main__':
     R['value_of_margin'] = val
     R['control'] = {s: dict(R=round(float(o['ctrl'][:, i, 0].mean()), 2), D=round(float(o['ctrl'][:, i, 1].mean()), 2)) for i, s in enumerate(ST) if NS[i] > 1}
     R['legislature_tips'] = {s: dict(upper=inp['tip'][i, 0].round(1).tolist(), lower=inp['tip'][i, 1].round(1).tolist()) for i, s in enumerate(ST)}
-    # robustness to the questionable parameters, and bootstrap bands from re-estimated shock parameters (policies held fixed)
     rob = {}
     for label, mod in (('incumbency=0', dict(incumb=0.0)), ('incumbency x2', dict(incumb=2 * inp['theta']['incumb'])),
                        ('state drift halved', dict(sd_drift=inp['theta']['sd_drift'] / 2)), ('national sd x0.7', dict(sd_nat=0.7 * inp['theta']['sd_nat']))):
         i2 = dict(inp); i2['theta'] = dict(inp['theta'], **mod)
-        P, pol = coordinated(i2, b0, Pu, (0, 1), rounds=3)
-        rob[label] = dict(uncoordinated=summ(sim(i2, Pu, b0, seed=1)), both_coordinated=summ(sim(i2, P, b0, seed=1)), policy=pol); print(label, rob[label], flush=True)
+        rob[label] = dict(national_ban=row(sim(i2, Pu, ban_matrix('national_ban'), seed=1, **simkw)), current_bans=row(sim(i2, Pu, b0, seed=1, **simkw)), no_bans=row(sim(i2, Pu, ban_matrix('none'), seed=1, **simkw)))
     R['robustness'] = rob
-    try:
+    try:                                            # bootstrap bands from re-estimated shock parameters (policies held fixed)
         with open('data/bootstrap_theta.json') as f: draws = json.load(f)
-        bs = {k: [] for k in ('status_quo_unc', 'status_quo_coord', 'unlimited_unc', 'national_ban')}
+        runs = dict(national_ban=(Pu, ban_matrix('national_ban'), {}), current_bans=(Pu, b0, {}), no_bans=(Pu, ban_matrix('none'), {}),
+                    R_all_out=(Pu, ban_matrix('none'), dict(abstain=-1)), D_all_out=(Pu, ban_matrix('none'), dict(abstain=1)))
+        bs = {k: [] for k in runs}
         for d in draws:
             i2 = dict(inp); i2['theta'] = d
-            bs['status_quo_unc'].append(sim(i2, Pu, b0, K=1500)['D_time']); bs['status_quo_coord'].append(sim(i2, eq['status_quo'], b0, K=1500)['D_time'])
-            bs['unlimited_unc'].append(sim(i2, Pu, ban_matrix('none'), K=1500)['D_time']); bs['national_ban'].append(sim(i2, Pu, ban_matrix('national_ban'), K=1500)['D_time'])
-        R['bootstrap'] = {k: dict(mean=round(float(np.mean(v)), 4), se=round(float(np.std(v)), 4)) for k, v in bs.items()}
-        a = np.array(bs['status_quo_coord']) - np.array(bs['status_quo_unc']); R['bootstrap']['coord_minus_unc'] = dict(mean=round(float(a.mean()), 4), se=round(float(a.std()), 4))
-        a = np.array(bs['unlimited_unc']) - np.array(bs['national_ban']); R['bootstrap']['unlimited_minus_ban'] = dict(mean=round(float(a.mean()), 4), se=round(float(a.std()), 4))
-        R['bootstrap']['n_draws'] = len(draws); print('bootstrap', R['bootstrap'], flush=True)
+            for k, (P, ban, kw) in runs.items(): bs[k].append(sim(i2, P, ban, K=1500, **dict(simkw, **kw))['D_time'])
+        R['bootstrap'] = {k: dict(mean=round(float(np.mean(v)), 4), se=round(float(np.std(v)), 4)) for k, v in bs.items()}; R['bootstrap']['n_draws'] = len(draws)
     except FileNotFoundError: pass
-    R['n_evals'] = NEVAL[0]; R['seconds'] = time.time() - t00
-    with open('data/results.json', 'w') as f: json.dump(R, f, indent=1, default=lambda v: v.tolist() if hasattr(v, 'tolist') else str(v))
+    return R
+
+if __name__ == '__main__':
+    mode = sys.argv[1] if len(sys.argv) > 1 else 'final'; out = {}
+    if mode == 'rough':                              # first-pass maps only
+        worlds = [('actual', load_inputs('data/maps'), {}, True)]
+    else:                                            # tentacle-allowed maps (keeping the better of the two sets), plus the two 50-50 exercises
+        inp = load_inputs('data/maps_hq', alt_dir='data/maps')
+        worlds = [('actual', inp, {}, True), ('national_5050_clean_start', inp, dict(clean_start=True), False),
+                  ('every_state_5050', load_inputs('data/maps_hq_even', enacted_floor=False), dict(even_start=True), False)]
+    for name, inp, kw, full in worlds:
+        assert not inp['missing'], inp['missing']; print(name, flush=True); out[name] = study(inp, kw, full)
+    out['theta'] = worlds[0][1]['theta']; out['n_evals'] = NEVAL[0]; out['seconds'] = time.time() - t00
+    with open('data/results_rough.json' if mode == 'rough' else 'data/results.json', 'w') as f: json.dump(out, f, indent=1, default=lambda v: v.tolist() if hasattr(v, 'tolist') else str(v))
     print('evaluations', NEVAL[0], 'seconds', round(time.time() - t00))
