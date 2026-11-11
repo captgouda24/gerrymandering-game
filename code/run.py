@@ -1,5 +1,5 @@
 """Solve the gerrymandering game and run the counterfactuals.  Writes data/results.json."""
-import sys, json, time, itertools, numpy as np
+import sys, os, json, time, itertools, numpy as np
 from scipy.stats import norm
 sys.path.insert(0, 'code')
 from model import *
@@ -119,10 +119,16 @@ if __name__ == '__main__':
         worlds = [('actual', load_inputs('data/maps'), {}, True)]
     else:                                            # tentacle-allowed maps (keeping the better of the two sets), plus the two 50-50 exercises
         inp = load_inputs('data/maps_hq', alt_dir='data/maps')
-        worlds = [('actual', inp, {}, True), ('national_5050_clean_start', inp, dict(clean_start=True), False),
-                  ('every_state_5050', load_inputs('data/maps_hq_even', enacted_floor=False), dict(even_start=True), False)]
+        worlds = [('national_5050_clean_start', inp, dict(clean_start=True), False),
+                  ('every_state_5050', load_inputs('data/maps_hq_even', enacted_floor=False), dict(even_start=True), False), ('actual', inp, {}, True)]
+    path = 'data/results_rough.json' if mode == 'rough' else 'data/results_partial.json'
+    if mode != 'rough' and os.path.exists(path):         # resume: worlds already solved are kept
+        with open(path) as f: out = json.load(f)
     for name, inp, kw, full in worlds:
+        if name in out: continue
         assert not inp['missing'], inp['missing']; print(name, flush=True); out[name] = study(inp, kw, full)
-    out['theta'] = worlds[0][1]['theta']; out['n_evals'] = NEVAL[0]; out['seconds'] = time.time() - t00
+        if mode != 'rough':
+            with open(path, 'w') as f: json.dump(out, f, indent=1, default=lambda v: v.tolist() if hasattr(v, 'tolist') else str(v))
+    out['theta'] = worlds[-1][1]['theta']; out['n_evals'] = NEVAL[0]; out['seconds'] = time.time() - t00
     with open('data/results_rough.json' if mode == 'rough' else 'data/results.json', 'w') as f: json.dump(out, f, indent=1, default=lambda v: v.tolist() if hasattr(v, 'tolist') else str(v))
     print('evaluations', NEVAL[0], 'seconds', round(time.time() - t00))

@@ -1,0 +1,72 @@
+/tmp/claude-0/-home-user/277cb819-c4bb-5a44-8ea9-25ae4328e462/scratchpad/code/drawhq.py:33: DeprecationWarning: gerrychain.tree.recursive_tree_part is deprecated; use gerrychain.partition.recursive_tree_part instead. The legacy import will be removed in GerryChain 2.0.
+  part = recursive_tree_part(g, range(N), ideal, 'pop', loose, method=functools.partial(bipartition_tree, max_attempts=3000))
+/usr/local/lib/python3.13/site-packages/gerrychain/_deprecated.py:362: DeprecationWarning: recursive_tree_part(..., method=...) is deprecated; use bipartition_tree_fn=... instead. The legacy name will be removed in GerryChain 2.0.
+  return fn(*args, **kwargs)
+/tmp/claude-0/-home-user/277cb819-c4bb-5a44-8ea9-25ae4328e462/scratchpad/code/drawhq.py:33: DeprecationWarning: gerrychain.tree.recursive_tree_part is deprecated; use gerrychain.partition.recursive_tree_part instead. The legacy import will be removed in GerryChain 2.0.
+  part = recursive_tree_part(g, range(N), ideal, 'pop', loose, method=functools.partial(bipartition_tree, max_attempts=3000))
+/usr/local/lib/python3.13/site-packages/gerrychain/_deprecated.py:362: DeprecationWarning: recursive_tree_part(..., method=...) is deprecated; use bipartition_tree_fn=... instead. The legacy name will be removed in GerryChain 2.0.
+  return fn(*args, **kwargs)
+/tmp/claude-0/-home-user/277cb819-c4bb-5a44-8ea9-25ae4328e462/scratchpad/code/drawhq.py:33: DeprecationWarning: gerrychain.tree.recursive_tree_part is deprecated; use gerrychain.partition.recursive_tree_part instead. The legacy import will be removed in GerryChain 2.0.
+  part = recursive_tree_part(g, range(N), ideal, 'pop', loose, method=functools.partial(bipartition_tree, max_attempts=3000))
+/usr/local/lib/python3.13/site-packages/gerrychain/_deprecated.py:362: DeprecationWarning: recursive_tree_part(..., method=...) is deprecated; use bipartition_tree_fn=... instead. The legacy name will be removed in GerryChain 2.0.
+  return fn(*args, **kwargs)
+/usr/local/lib/python3.13/site-packages/gerrychain/tree/bipartition_tree.py:1394: BipartitionWarning: 
+Failed to find a balanced cut after 1000 attempts.
+This can happen if there are relatively few ways to split a graph
+into 2 pieces with appropriate population balance (+/- epsilon)
+for example, if there is a choke-point in the middle of the 
+merged districts.
+
+If possible, consider enabling pair reselection within your
+MarkovChain proposal method to allow the algorithm to select
+a different pair of districts for recombination.
+  warnings.warn(
+/tmp/claude-0/-home-user/277cb819-c4bb-5a44-8ea9-25ae4328e462/scratchpad/code/drawhq.py:33: DeprecationWarning: gerrychain.tree.recursive_tree_part is deprecated; use gerrychain.partition.recursive_tree_part instead. The legacy import will be removed in GerryChain 2.0.
+  part = recursive_tree_part(g, range(N), ideal, 'pop', loose, method=functools.partial(bipartition_tree, max_attempts=3000))
+/usr/local/lib/python3.13/site-packages/gerrychain/_deprecated.py:362: DeprecationWarning: recursive_tree_part(..., method=...) is deprecated; use bipartition_tree_fn=... instead. The legacy name will be removed in GerryChain 2.0.
+  return fn(*args, **kwargs)
+/usr/local/lib/python3.13/site-packages/gerrychain/tree/bipartition_tree.py:1394: BipartitionWarning: 
+Failed to find a balanced cut after 1000 attempts.
+This can happen if there are relatively few ways to split a graph
+into 2 pieces with appropriate population balance (+/- epsilon)
+for example, if there is a choke-point in the middle of the 
+merged districts.
+
+If possible, consider enabling pair reselection within your
+MarkovChain proposal method to allow the algorithm to select
+a different pair of districts for recombination.
+  warnings.warn(
+TX 298
+FL 392
+/usr/local/lib/python3.13/site-packages/gerrychain/tree/bipartition_tree.py:1394: BipartitionWarning: 
+Failed to find a balanced cut after 1000 attempts.
+This can happen if there are relatively few ways to split a graph
+into 2 pieces with appropriate population balance (+/- epsilon)
+for example, if there is a choke-point in the middle of the 
+merged districts.
+
+If possible, consider enabling pair reselection within your
+MarkovChain proposal method to allow the algorithm to select
+a different pair of districts for recombination.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/gerrychain/tree/bipartition_tree.py:1394: BipartitionWarning: 
+Failed to find a balanced cut after 1000 attempts.
+This can happen if there are relatively few ways to split a graph
+into 2 pieces with appropriate population balance (+/- epsilon)
+for example, if there is a choke-point in the middle of the 
+merged districts.
+
+If possible, consider enabling pair reselection within your
+MarkovChain proposal method to allow the algorithm to select
+a different pair of districts for recombination.
+  warnings.warn(
+PA 520
+NY 950
+IL 709
+NC 55
+GA 116
+CA 1190
+VA 51
+MI 222
+AZ 20
+NJ 246
