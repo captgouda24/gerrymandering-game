@@ -9,6 +9,8 @@ from drawmaps import SEATS, CHAMBERS, TARGETS, HEDGE, MIN_UNITS, statewide, load
 import flip, multimember
 RESTARTS = int(os.environ.get('RESTARTS', 3)); EFFORT = float(os.environ.get('EFFORT', 1.0)); EVEN = os.environ.get('EVEN') == '1'
 OUT = 'data/maps_hq_even' if EVEN else 'data/maps_hq'
+CHAMBERS_ONLY = os.environ.get('CHAMBERS_ONLY') == '1'      # keep the congressional maps already on file, redraw only the chambers
+ASSIGN = 'data/assign_even' if EVEN else ('data/assign_chambers' if CHAMBERS_ONLY else 'data/assign')   # precinct-to-district assignments
 
 def raw(st):
     z = np.load(f'data/vtd/{st}.npz', allow_pickle=True); n = len(z['pop'])
@@ -72,17 +74,22 @@ def congress(st, V, indptr, indices, verbose, keep=None):
 
 def tip_of(sums, sign): l = sign * flip.leans_of(sums); k = np.argsort(-l)[len(l) // 2]; return float(l[k]), k
 
-def chamber(st, ndist, V, indptr, indices, sw, verbose):
+def whole_precinct(st, ndist, keep, tag):
+    res = multimember.best_of(st, ndist, multimember.CAP.get(st, 1.3))
+    for p in ('R', 'D'): keep[f'{tag}_{p}'] = res.pop(p + '_assign')
+    return res
+
+def chamber(st, ndist, V, indptr, indices, sw, verbose, keep, tag):
     n = len(V)
-    if n < MIN_UNITS * ndist: return multimember.best_of(st, ndist, multimember.CAP.get(st, 1.3))
+    if n < MIN_UNITS * ndist: return whole_precinct(st, ndist, keep, tag)
     ideal = V[:, 4].sum() / ndist; none = np.zeros(3)
     try: starts = [start_partition(st, ndist, V, indptr, indices, 0.05, sd) for sd in range(2)]
-    except RuntimeError: return multimember.best_of(st, ndist, multimember.CAP.get(st, 1.3))
+    except RuntimeError: return whole_precinct(st, ndist, keep, tag)
     tol = max(s[2] for s in starts)
-    if tol > 0.11: return multimember.best_of(st, ndist, multimember.CAP.get(st, 1.3))    # precincts too coarse for real districts
+    if tol > 0.11: return whole_precinct(st, ndist, keep, tag)    # precincts too coarse for real districts
     lo, hi = ideal * (1 - tol), ideal * (1 + tol)
     res = dict(districts_true=ndist, districts_drawn=ndist, pop_tolerance=tol, method='precinct flips, contiguity only')
-    t0, k0 = tip_of(starts[0][1], 1); res['neutral_tip'] = float(np.mean([tip_of(s[1], 1)[0] for s in starts]) - sw)
+    keep[tag + '_neutral'] = starts[0][0].copy(); t0, k0 = tip_of(starts[0][1], 1); res['neutral_tip'] = float(np.mean([tip_of(s[1], 1)[0] for s in starts]) - sw)
     res['neutral_tip_shares'] = flip.shares_of(starts[0][1])[k0].round(3).tolist()
     iters = int(min(1.5e7, max(2e6, 1000 * n)) * EFFORT)
     for name, sign in (('R', 1.0), ('D', -1.0)):
@@ -93,23 +100,26 @@ def chamber(st, ndist, V, indptr, indices, sw, verbose):
                 x = tip_of(s, sign)[0] + 1.5
                 flip.anneal(a, s, V, indptr, indices, lo, hi, sign, x, none, iters, 0.02, 0.0005, 3.0, 0.7, 1, 31 * rnd + 5)
             t, k = tip_of(s, sign)
-            if best is None or t > best[0]: best = (t, flip.shares_of(s)[k].round(3).tolist())
-        res[name + '_tip'] = sign * best[0] - sw; res[name + '_tip_shares'] = best[1]
+            if best is None or t > best[0]: best = (t, flip.shares_of(s)[k].round(3).tolist(), a.copy())
+        res[name + '_tip'] = sign * best[0] - sw; res[name + '_tip_shares'] = best[1]; keep[f'{tag}_{name}'] = best[2]
     if verbose: print(st, ndist, {k: round(v, 1) for k, v in res.items() if k.endswith('_tip')}, 'tol', tol, flush=True)
     return res
 
 def run_state(st, out=None, verbose=False):
-    out = out or OUT; t0 = time.time(); z, V, indptr, indices = raw(st); pop = z['pop'].sum(); sw = 0.0 if EVEN else statewide(z)
+    out = out or OUT; t0 = time.time(); z, V, indptr, indices = raw(st); pop = z['pop'].sum(); sw = 0.0 if EVEN else statewide(z); keep = {}
     res = dict(state=st, statewide=sw, state_shares=[float(z[g].sum() / pop) for g in ('hispanic', 'black', 'asian')])
-    if SEATS[st] == 1: res.update(seats=1, neutral=[sw], R={}, D={}, R_h={}, D_h={})
+    if CHAMBERS_ONLY:
+        with open(f'{out}/{st}.json') as f: res = json.load(f)
+    elif SEATS[st] == 1: res.update(seats=1, neutral=[sw], R={}, D={}, R_h={}, D_h={})
     else:
-        try: res.update(congress(st, V, indptr, indices, verbose))
+        try: res.update(congress(st, V, indptr, indices, verbose, keep))
         except RuntimeError:
             N = SEATS[st]; flat = [[sw] * N, [res['state_shares']] * N]; menu = {str(t): flat for t in TARGETS}
             res.update(seats=N, congress_fallback=True, neutral=flat[0], neutral_one=flat, R=menu, D=menu, R_h=menu, D_h=menu)
-    up, lo = CHAMBERS[st]; res['upper'] = chamber(st, up, V, indptr, indices, sw, verbose)
-    res['lower'] = dict(res['upper']) if lo == up else chamber(st, lo, V, indptr, indices, sw, verbose)
-    res['seconds'] = round(time.time() - t0); os.makedirs(out, exist_ok=True)
+    up, lo = CHAMBERS[st]; res['upper'] = chamber(st, up, V, indptr, indices, sw, verbose, keep, 'upper')
+    res['lower'] = dict(res['upper']) if lo == up else chamber(st, lo, V, indptr, indices, sw, verbose, keep, 'lower')
+    res['seconds'] = round(time.time() - t0); res['assignments_saved'] = True; os.makedirs(out, exist_ok=True); os.makedirs(ASSIGN, exist_ok=True)
+    np.savez_compressed(f'{ASSIGN}/{st}.npz', ids=z['ids'], **keep)       # every map drawn is saved precinct by precinct
     with open(f'{out}/{st}.json', 'w') as f: json.dump(res, f)
     return res
 
@@ -119,7 +129,7 @@ if __name__ == '__main__':
         r = run_state(sys.argv[1], out=sys.argv[2] if len(sys.argv) > 2 else OUT, verbose=True); print('seconds', r['seconds'])
     else:
         def work(st):
-            if os.path.exists(f'{OUT}/{st}.json'): return st, 0
+            if os.path.exists(f'{ASSIGN}/{st}.npz'): return st, 0
             try: return st, run_state(st)['seconds']
             except Exception as e: return st, f'ERR {e!r}'
         with mp.Pool(4) as pool:

@@ -60,15 +60,15 @@ def chamber(st, nseats=None, cap_seats=None, seed=0, proposals=600_000, rounds=8
             if verbose: print(st, name, 'round', r, 'districts', int(alive.sum()), 'tipping lean for drawer', round(best, 2), f'{time.time()-t1:.0f}s', flush=True)
         tl, k = tip(sums, alive, sign)
         out[name + '_tip'] = sign * tl - sw; out[name + '_tip_shares'] = (sums[k, 5:8] / max(sums[k, 4], 1)).round(3).tolist()
-        out[name + '_districts'] = int(alive.sum())
+        out[name + '_districts'] = int(alive.sum()); out[name + '_assign'] = label.copy()
     out['districts_drawn'] = out['R_districts']; return out
 
 def best_of(st, nseats=None, cap_seats=None, seeds=3, proposals=300_000, rounds=6):
     """Several independent searches; keep each party's best."""
     runs = [chamber(st, nseats, cap_seats, seed=sd, proposals=proposals, rounds=rounds, verbose=False) for sd in range(seeds)]
     res = dict(runs[0]); br = max(runs, key=lambda r: r['R_tip']); bd = min(runs, key=lambda r: r['D_tip'])
-    for k in ('R_tip', 'R_tip_shares', 'R_districts'): res[k] = br[k]
-    for k in ('D_tip', 'D_tip_shares', 'D_districts'): res[k] = bd[k]
+    for k in ('R_tip', 'R_tip_shares', 'R_districts', 'R_assign'): res[k] = br[k]
+    for k in ('D_tip', 'D_tip_shares', 'D_districts', 'D_assign'): res[k] = bd[k]
     return res
 
 if __name__ == '__main__':
