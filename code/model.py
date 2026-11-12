@@ -103,7 +103,7 @@ def simulate(inp, A, B, H, ban, K=2000, seed=0, mid_decade=True, lam=0.5, sd_gov
         off = np.tile((inp['neutral'] - inp['lean'][:, None])[SIDX, np.arange(ND) - OFF[:-1][SIDX]], (K, 1)); sh = np.tile((inp['nsh'] - inp['natsh'])[SIDX, np.arange(ND) - OFF[:-1][SIDX]], (K, 1, 1))
         gov = np.where(rng.random((K, S)) < 0.5, 1.0, -1.0); leg = np.where(rng.random((K, S)) < 0.5, 1.0, -1.0); legmap[:] = 0
     drawn = np.zeros((K, S)); cur_j = -2 * np.ones((K, S), int)                 # -2 = today's enacted map, -1 = neutral map
-    rseats = np.zeros((K, T)); ctrl_log = np.zeros((T, S, 2)); disc = beta ** np.arange(T)
+    pres_path = np.zeros((K, T)); rseats = np.zeros((K, T)); ctrl_log = np.zeros((T, S, 2)); disc = beta ** np.arange(T)
     own_seats = np.zeros((2, S)); own_time = np.zeros((2, S)); lockout = []
     rel_menu = inp['menus'] - inp['lean'][:, None, None, None, None]; rel_neu = inp['neutral'] - inp['lean'][:, None]
     msh = inp['msh'] - inp['natsh']; nsh = inp['nsh'] - inp['natsh']; ssh = inp['ssh'] - inp['natsh']
@@ -146,6 +146,7 @@ def simulate(inp, A, B, H, ban, K=2000, seed=0, mid_decade=True, lam=0.5, sd_gov
             own_seats[pi] += disc[t] * (mask * own).sum(0); own_time[pi] += disc[t] * mask.sum(0); ctrl_log[t, :, pi] = (ctrl == sg).mean(0)
         inc = np.where(rng.random((K, ND)) < retire, 0.0, win); incw[:] = 1.0
         if not MID[t]: pres = np.where(nat + rng.normal(0, 2, K) > 0, 1.0, -1.0)
+        pres_path[:, t] = pres                                                   # president serving alongside the House just elected
         gyr = (MID[t] & ~GOV_PRES_YEAR) | (~MID[t] & GOV_PRES_YEAR) | GOV_EVERY
         gov = np.where(gyr[None, :], np.where(env + rng.normal(0, sd_gov, (K, S)) > 0, 1.0, -1.0), gov)
         bi = np.where(legmap > 0, 1, np.where(legmap < 0, 2, 0)); common = rng.normal(0, 2, (K, S))   # each chamber is decided by its tipping seat
@@ -157,7 +158,7 @@ def simulate(inp, A, B, H, ban, K=2000, seed=0, mid_decade=True, lam=0.5, sd_gov
                sd_seats=float(rseats.std()), flips=float((np.diff(rmaj.astype(int), axis=1) != 0).sum(1).mean()),
                D_time_se=float(((~rmaj) * w).sum(1).std() / np.sqrt(K)),
                R_maj_by_year=rmaj.mean(0), own_seats=own_seats / np.maximum(own_time, 1e-9), own_time=own_time / (K * disc.sum()), ctrl=ctrl_log)
-    if detail: out.update(rseats=rseats)
+    if detail: out.update(rseats=rseats, pres=pres_path)
     return out
 
 def const_policy(aR, bR, hR, aD, bD, hD):
