@@ -103,6 +103,7 @@ def simulate(inp, A, B, H, ban, K=2000, seed=0, mid_decade=True, lam=0.5, sd_gov
         off = np.tile((inp['neutral'] - inp['lean'][:, None])[SIDX, np.arange(ND) - OFF[:-1][SIDX]], (K, 1)); sh = np.tile((inp['nsh'] - inp['natsh'])[SIDX, np.arange(ND) - OFF[:-1][SIDX]], (K, 1, 1))
         gov = np.where(rng.random((K, S)) < 0.5, 1.0, -1.0); leg = np.where(rng.random((K, S)) < 0.5, 1.0, -1.0); legmap[:] = 0
     drawn = np.zeros((K, S)); cur_j = -2 * np.ones((K, S), int)                 # -2 = today's enacted map, -1 = neutral map
+    leg_path = np.zeros((K, T, S), np.int8) if detail else None; gov_path = np.zeros((K, T, S), np.int8) if detail else None; env_path = np.zeros((K, T, S), np.float32) if detail else None
     pres_path = np.zeros((K, T)); rseats = np.zeros((K, T)); ctrl_log = np.zeros((T, S, 2)); disc = beta ** np.arange(T)
     own_seats = np.zeros((2, S)); own_time = np.zeros((2, S)); lockout = []
     rel_menu = inp['menus'] - inp['lean'][:, None, None, None, None]; rel_neu = inp['neutral'] - inp['lean'][:, None]
@@ -153,12 +154,13 @@ def simulate(inp, A, B, H, ban, K=2000, seed=0, mid_decade=True, lam=0.5, sd_gov
         up = env + inp['tip'][sidx, 0, bi] + np.einsum('ksg,kg->ks', tipsh[sidx, 0, bi], fg) + common + rng.normal(0, 2, (K, S)) > 0
         lo = env + inp['tip'][sidx, 1, bi] + np.einsum('ksg,kg->ks', tipsh[sidx, 1, bi], fg) + common + rng.normal(0, 2, (K, S)) > 0
         leg = np.where(up & lo, 1.0, np.where(~up & ~lo, -1.0, 0.0))
+        if detail: leg_path[:, t] = leg; gov_path[:, t] = gov; env_path[:, t] = env    # legislature and governor after this election; statewide R margin
     rmaj = rseats >= 218; w = disc / disc.sum()
     out = dict(R_time=float((rmaj * w).sum(1).mean()), D_time=float(((~rmaj) * w).sum(1).mean()), R_seats=float(rseats.mean()),
                sd_seats=float(rseats.std()), flips=float((np.diff(rmaj.astype(int), axis=1) != 0).sum(1).mean()),
                D_time_se=float(((~rmaj) * w).sum(1).std() / np.sqrt(K)),
                R_maj_by_year=rmaj.mean(0), own_seats=own_seats / np.maximum(own_time, 1e-9), own_time=own_time / (K * disc.sum()), ctrl=ctrl_log)
-    if detail: out.update(rseats=rseats, pres=pres_path)
+    if detail: out.update(rseats=rseats, pres=pres_path, leg=leg_path, gov=gov_path, env=env_path)
     return out
 
 def const_policy(aR, bR, hR, aD, bD, hD):
