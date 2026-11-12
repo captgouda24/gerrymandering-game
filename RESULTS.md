@@ -1,24 +1,25 @@
-# Results (second run, finished 2026-11-11)
+# Results (third run, finished 2026-11-12)
 
 Illustrative simulation, not a forecast. Every number is the Democratic share of discounted time holding the U.S. House
 majority over the 15 elections 2028-2056 (the Republican share is one minus it). Simulation error is about 0.3 points;
 re-estimating the shock parameters 40 times gives standard errors of 2-3 points on levels. Full output: `data/results.json`.
 
-This is the second run. Its congressional maps are the ones whose precinct assignments are saved in `data/assign/` and
-drawn in `data/maps_img/`. The first run's maps were not saved; its results are kept in `data/results_v1.json`. Headline
-numbers moved by 1-2 points toward Democrats, because the second set of Republican maps is slightly weaker (see the
-benchmark table).
+Every map behind these numbers is saved precinct by precinct: congressional maps in `data/assign/` (pictures in
+`data/maps_img/`), legislative chambers in `data/assign_chambers/`, and the every-state-50-50 maps in `data/assign_even/`.
+The first run's maps were not saved; its results are kept in `data/results_v1.json` and differ by 1-2 points, because
+its Republican congressional maps were slightly stronger (see the benchmark table). Election-by-election paths are in
+`data/timeline.json` and charted in `data/timeline.html`.
 
 ## Time in majority by scenario
 
 | Scenario | Actual start | National 50-50, clean start | Every state 50-50 |
 |---|---|---|---|
 | National ban (neutral maps everywhere) | 42% | 40% | 42% |
-| Today's bans, both parties gerrymander | 26% | 24% | 40% |
-| No bans anywhere, both gerrymander | 32% | 32% | 38% |
-| Republicans all-out, Democrats abstain (no bans) | 17% | 17% | 27% |
-| Republicans all-out, Democrats abstain (today's bans) | 20% | 19% | 31% |
-| Democrats all-out, Republicans abstain (no bans) | 65% | 65% | 55% |
+| Today's bans, both parties gerrymander | 26% | 24% | 41% |
+| No bans anywhere, both gerrymander | 32% | 32% | 39% |
+| Republicans all-out, Democrats abstain (no bans) | 17% | 17% | 26% |
+| Republicans all-out, Democrats abstain (today's bans) | 20% | 19% | 32% |
+| Democrats all-out, Republicans abstain (no bans) | 65% | 65% | 57% |
 | Democrats all-out, Republicans abstain (today's bans) | 51% | 49% | 52% |
 
 - **Actual start**: 2026 results, incumbents, maps and state governments as they stand.
@@ -32,11 +33,11 @@ benchmark table).
 1. **Who gerrymanders matters enormously.** Unilateral effort moves the outcome from 17% to 65%.
 2. **Mutual gerrymandering under today's rules costs Democrats about 16 points** against a national ban (26% vs 42%).
 3. **Today's bans hurt Democrats.** With no bans anywhere they hold the majority 32% of the time, against 26% now.
-4. **When every state is 50-50, mutual gerrymandering is close to a wash** (38-40% vs 42% under a ban). The real-world
+4. **When every state is 50-50, mutual gerrymandering is close to a wash** (39-41% vs 42% under a ban). The real-world
    asymmetry therefore comes from which states each party holds and where the bans are, not from map-drawing skill.
 5. **Neutral maps still favor Republicans** (about 42% Democratic), including when every state is 50-50. See caveats.
-6. **National coordination barely matters.** Coordinated play by either or both parties moves the result by about a
-   point or less, against state-by-state seat maximizing.
+6. **National coordination barely matters.** Coordinated play by either or both parties moves the result by at most
+   about 2 points, against state-by-state seat maximizing.
 7. **The majority threshold is where the value is.** The chance Republicans hold the next three Congresses rises from 59%
    with 170-177 seats to 74% just under 218, then only to 80% at 258-265.
 8. **Mid-decade redistricting costs Democrats about 2 points** (26% vs 28% if maps could only change after a census).
@@ -50,12 +51,12 @@ benchmark table).
 
 | Reform | Change |
 |---|---|
-| Ban in Texas | +3.5 |
-| Ban in Florida | +2.2 |
-| Ban in North Carolina | +2.0 |
+| Ban in Texas | +3.6 |
+| Ban in Florida | +2.1 |
+| Ban in North Carolina | +1.9 |
 | Lift New York's ban | +1.8 |
 | Ban in Indiana | +1.7 |
-| Ban in Ohio | +1.7 |
+| Ban in Ohio | +1.6 |
 | Ban in Missouri | +1.6 |
 | Ban in South Carolina | +1.3 |
 | Ban in Illinois | -1.3 |
@@ -66,23 +67,24 @@ benchmark table).
 ## Control of the pen
 
 Averaged over states, the seat that decides a legislative chamber sits 2 points more Republican than the state under a
-neutral map, about 15 points more Republican under a Republican-drawn map, and about 13 points more Democratic under a
+neutral map, about 15 points more Republican under a Republican-drawn map, and about 12 points more Democratic under a
 Democratic-drawn one. Share of 2028-2056 in which each party controls redistricting, under today's bans:
 
 | State | Republicans | Democrats |
 |---|---|---|
-| North Carolina | 89% | 4% |
-| Florida | 76% | 6% |
+| North Carolina | 88% | 4% |
+| Florida | 74% | 7% |
 | Ohio | 67% | 4% |
-| Texas | 58% | 8% |
-| Georgia | 47% | 13% |
-| Wisconsin | 39% | 32% |
-| Nevada | 28% | 45% |
-| Minnesota | 19% | 58% |
+| Texas | 60% | 9% |
+| Georgia | 45% | 14% |
+| Wisconsin | 40% | 33% |
+| Nevada | 25% | 41% |
+| Minnesota | 18% | 56% |
 | Illinois | 4% | 81% |
 | Maryland | 0% | 98% |
 
-How long a lock-out lasts once control is lost was not computed.
+House control changes hands often: under today's bans the average unbroken spell is 2.7 elections, and one party holds
+all 15 in 4% of futures (13% when only Republicans gerrymander). State-level lock-out durations were not computed.
 
 ## Drawn maps against enacted maps (seats carried by at least 4 / 8 / 12 / 16 points)
 
@@ -114,10 +116,13 @@ Georgia and two weaker in Pennsylvania (11 seats against 13).
   voters) are set by judgment from two precinct-level swings.
 - **Map quality is uneven.** All congressional maps in this run were drawn at a quarter of full search effort (the first
   run drew Texas, Florida, New York and Pennsylvania at full effort). Legislative chambers are true single-member maps within 5% of equal population where
-  precincts allow, within 10% in some states, and whole-precinct approximations in others. The Texas House Republican
-  draw looks under-optimized and the Florida House fell back to whole precincts; neither was diagnosed.
-- **Saved assignments cover congressional maps only.** Legislative chamber maps and the every-state-50-50 maps were
-  not saved precinct by precinct. The Maine picture is mostly blank (34% of precincts matched Census shapes).
+  precincts allow, within 10% in some states, and whole-precinct approximations in others. The legislative search is noisy:
+  redrawing with the same settings moves a chamber's tipping seat by about 5 points (standard deviation), so
+  single-state pen-control figures are rough. The Texas Senate (+3 for Republicans) and Florida House (+4) draws look
+  under-optimized.
+- **Checks on the saved congressional maps** (`code/validate.py`): all 748 are contiguous and match the menus the model
+  uses; Ohio's 16 partisan maps deviate up to 2% from equal population instead of 1%. Chamber maps were not checked this
+  way. The Maine picture is mostly blank (34% of precincts matched Census shapes).
 - **"Enacted" leans** come from the 2026 Cook index as listed on Wikipedia and may reflect superseded maps in a few states.
 - Population is fixed at the 2020 census; no reapportionment. State courts and the Voting Rights Act are ignored.
 - "Uncoordinated" means each state party maximizes its own state's expected seats; "coordinated" means one national rule
